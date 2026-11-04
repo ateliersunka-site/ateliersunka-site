@@ -31,6 +31,9 @@ body {
 
 img { max-width: 100%; display: block; }
 
+/* 固定ヘッダーの下に見出しが隠れないように */
+[id] { scroll-margin-top: 120px; }
+
 a { color: var(--text); text-decoration: none; transition: opacity .2s; }
 a:hover { opacity: .72; }
 
@@ -41,7 +44,7 @@ p { margin: 0; }
 /* ---------- ヘッダー ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(255,255,255,.97);
+  background: var(--white);
   border-bottom: 1px solid var(--line);
 }
 .site-header .container {
@@ -222,8 +225,8 @@ p { margin: 0; }
   .site-header .container { gap: 4px 12px; padding-top: 8px; padding-bottom: 6px; }
   .brand span { font-size: 12px; }
   .btn-store { margin-left: auto; padding: 10px 14px; font-size: 12px; }
-  .nav { order: 3; width: 100%; margin-left: 0; justify-content: space-around; gap: 4px 12px; font-size: 13px; }
-  .nav a { padding: 8px 4px; }
+  .nav { order: 3; width: 100%; margin-left: 0; justify-content: space-between; gap: 0 8px; font-size: 12px; letter-spacing: .04em; }
+  .nav a { padding: 8px 0; white-space: nowrap; }
   .hero-frame { height: 72vh; min-height: 460px; }
   .hero h1 { font-size: 34px; }
   .hero-sub { font-size: 15px; }
@@ -247,4 +250,9 @@ p { margin: 0; }
   .news-date, .news-title { font-size: 16px; }
   .article dl { grid-template-columns: 1fr; gap: 4px; }
   .article dd { margin-bottom: 12px; }
+}
+
+/* とても狭いスマホでは、ロゴ横の文字を隠してヘッダーを2段に収める */
+@media (max-width: 400px) {
+  .brand span { display: none; }
 }
