@@ -1,0 +1,250 @@
+/* atelier Sunka 公式サイト 共通スタイル
+   色・フォントは CLAUDE.md の「4. デザイン」に合わせる */
+
+:root {
+  --white: #FFFFFF;
+  --gray-bg: #F3F3F1;
+  --tan-bg: #EFE6DA;
+  --tan-link: #5C3D2A;
+  --indigo: #34465A;
+  --red: #DF3821;
+  --text: #151311;
+  --text-sub: #33302C;
+  --line: #E4E4E1;
+  --max: 1280px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1.9;
+  -webkit-text-size-adjust: 100%;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--text); text-decoration: none; transition: opacity .2s; }
+a:hover { opacity: .72; }
+
+p { margin: 0; }
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- ヘッダー ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,.97);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .container {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+  gap: 12px 24px; padding-top: 12px; padding-bottom: 12px;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand img { height: 52px; width: auto; }
+.brand span { font-size: 13px; font-weight: 700; letter-spacing: .2em; }
+
+.nav { margin-left: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 14px; font-weight: 500; letter-spacing: .12em; }
+.nav a[aria-current="page"] { border-bottom: 2px solid var(--indigo); }
+.btn-store {
+  background: var(--red); color: var(--white) !important;
+  padding: 12px 22px; font-size: 13px; font-weight: 700; letter-spacing: .16em;
+}
+
+/* ---------- 見出し ---------- */
+.label { font-size: 14px; font-weight: 700; letter-spacing: .3em; color: var(--indigo); text-align: center; }
+.section-title { margin: 8px 0 48px; font-size: 34px; font-weight: 700; letter-spacing: .14em; text-align: center; line-height: 1.5; }
+.lead { margin: -32px 0 40px; font-size: 16px; color: var(--text-sub); text-align: center; }
+
+.section { padding-top: 128px; }
+.section:last-of-type { padding-bottom: 128px; }
+
+/* ---------- スライド ---------- */
+.hero { position: relative; }
+.hero-frame { position: relative; height: 680px; overflow: hidden; background: #BCAE96; }
+.hero-slide {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 1.2s ease;
+}
+.hero-slide.is-active { opacity: 1; }
+.hero-shade {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(28,20,12,.62) 0%, rgba(28,20,12,.25) 40%, rgba(28,20,12,0) 65%);
+}
+.hero-copy { position: absolute; left: 0; right: 0; bottom: 0; }
+.hero-copy .container { padding-bottom: 80px; }
+.hero h1 {
+  margin: 0; font-size: 56px; font-weight: 900; letter-spacing: .12em; line-height: 1.4; color: var(--white);
+  text-shadow: 0 2px 16px rgba(20,14,8,.55), 0 1px 3px rgba(20,14,8,.6);
+}
+.hero-sub {
+  margin-top: 18px; font-size: 18px; font-weight: 700; letter-spacing: .16em; color: var(--white);
+  text-shadow: 0 1px 10px rgba(20,14,8,.6), 0 1px 2px rgba(20,14,8,.6);
+}
+.hero-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 52px; height: 52px; border: 0; background: var(--indigo); color: var(--white);
+  font-size: 22px; cursor: pointer; font-family: inherit;
+}
+.hero-arrow.prev { left: 16px; }
+.hero-arrow.next { right: 16px; }
+.hero-dots { display: flex; justify-content: center; gap: 4px; padding-top: 12px; }
+.hero-dots button {
+  width: 44px; height: 44px; border: 0; background: transparent; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-dots span { display: block; width: 10px; height: 10px; border-radius: 50%; background: #BFB3A0; }
+.hero-dots button[aria-current="true"] span { background: var(--red); }
+
+/* ---------- 場面 ---------- */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
+.card { display: flex; flex-direction: column; gap: 18px; }
+.card h3, .card .card-title { margin: 0; font-size: 28px; font-weight: 700; letter-spacing: .14em; }
+.card p, .card .card-text { font-size: 16px; color: var(--text-sub); }
+.ratio-4-3 { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.ratio-3-2 { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.ratio-1-1 { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+
+/* 写真がまだない枠 */
+.ph {
+  width: 100%; background: #CEC2AD; color: var(--text);
+  display: flex; align-items: center; justify-content: center; padding: 16px;
+  font-size: 12px; text-align: center;
+}
+
+/* ---------- 理念 ---------- */
+.concepts { display: flex; flex-direction: column; gap: 96px; }
+.concept { display: flex; flex-wrap: wrap; align-items: center; gap: 40px 56px; }
+.concept.reverse { flex-wrap: wrap-reverse; }
+.concept-media { flex: 1 1 440px; }
+.concept-body { flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; }
+.concept-no { font-size: 72px; font-weight: 900; letter-spacing: .02em; color: var(--red); line-height: 1; }
+.concept-body h3 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: .14em; }
+.concept-body p { font-size: 16px; color: var(--text-sub); }
+
+/* ---------- 写真帯 ---------- */
+.band { position: relative; height: 460px; margin-top: 128px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 0 24px; }
+.band img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.band p {
+  position: relative; background: var(--indigo); color: var(--white);
+  font-size: 30px; font-weight: 700; letter-spacing: .16em; line-height: 1.6; text-align: center; padding: 28px 44px;
+}
+
+/* ---------- ボタン ---------- */
+.btn-row { display: flex; justify-content: center; margin-top: 56px; }
+.btn-main { background: var(--indigo); color: var(--white); padding: 20px 56px; font-size: 16px; font-weight: 700; letter-spacing: .2em; }
+.btn-line { border: 2px solid var(--indigo); color: var(--indigo); padding: 16px 44px; font-size: 15px; font-weight: 700; letter-spacing: .2em; }
+
+/* ---------- 購入前に知りたいこと ---------- */
+.guide { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.guide-item { background: var(--tan-bg); padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; }
+.guide-item h3 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: .14em; color: var(--text); }
+.guide-item p { font-size: 15px; color: var(--text-sub); }
+.guide-item a { margin-top: auto; font-size: 14px; font-weight: 700; letter-spacing: .08em; color: var(--tan-link); }
+
+/* ---------- Instagram ---------- */
+.insta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
+
+/* ---------- お知らせ ---------- */
+.news-list { max-width: 920px; margin: 0 auto; border-top: 2px solid var(--indigo); padding: 0; list-style: none; }
+.news-list li { border-bottom: 1px solid #D6D6D3; }
+.news-list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 32px; padding: 28px 8px; }
+.news-date { font-size: 18px; font-weight: 700; letter-spacing: .08em; color: var(--indigo); min-width: 140px; }
+.news-title { font-size: 18px; font-weight: 700; flex: 1 1 240px; }
+.news-type { font-size: 15px; color: var(--text-sub); }
+.news-empty { padding: 40px 8px; text-align: center; color: var(--text-sub); font-size: 15px; }
+.more { display: flex; justify-content: center; margin-top: 40px; font-size: 15px; font-weight: 700; letter-spacing: .16em; }
+
+/* ---------- 下層ページ ---------- */
+.page-head { padding: 96px 0 0; text-align: center; }
+.page-head h1 { margin: 8px 0 0; font-size: 40px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; }
+.page-head .page-lead { margin-top: 24px; font-size: 18px; font-weight: 500; letter-spacing: .16em; color: var(--text-sub); }
+
+.prose { max-width: 760px; margin: 0 auto; }
+.prose h2 { margin: 0 0 24px; font-size: 28px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; }
+.prose p { font-size: 16px; color: var(--text-sub); }
+.prose p + p { margin-top: 16px; }
+.prose ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.prose li { position: relative; padding-left: 20px; font-size: 16px; color: var(--text-sub); }
+.prose li::before { content: ""; position: absolute; left: 0; top: .8em; width: 8px; height: 8px; background: var(--indigo); }
+.prose li strong { color: var(--text); font-weight: 700; }
+
+.item-block { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center; }
+.item-block.reverse { flex-wrap: wrap-reverse; }
+.item-block .item-media { flex: 1 1 420px; }
+.item-block .item-body { flex: 1 1 340px; display: flex; flex-direction: column; gap: 20px; }
+.item-block h2 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: .14em; }
+.item-block p { font-size: 16px; color: var(--text-sub); }
+.item-block .btn-main { align-self: flex-start; padding: 16px 40px; font-size: 15px; }
+
+.photo-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+
+/* お知らせ詳細 */
+.article { max-width: 760px; margin: 0 auto; }
+.article-meta { display: flex; gap: 24px; justify-content: center; font-size: 15px; color: var(--indigo); font-weight: 700; letter-spacing: .08em; }
+.article dl { margin: 32px 0 0; display: grid; grid-template-columns: 8em 1fr; gap: 12px 16px; font-size: 16px; }
+.article dt { font-weight: 700; }
+.article dd { margin: 0; color: var(--text-sub); }
+
+/* ---------- フッター ---------- */
+.site-footer { background: var(--gray-bg); border-top: 4px solid var(--indigo); }
+.site-footer .container {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 40px;
+  padding-top: 64px; padding-bottom: 40px;
+}
+.footer-brand { display: flex; flex-direction: column; gap: 12px; }
+.footer-brand img { height: 120px; width: auto; }
+.footer-brand span { font-size: 14px; font-weight: 700; letter-spacing: .2em; }
+.footer-nav { display: flex; flex-wrap: wrap; gap: 16px 28px; font-size: 14px; font-weight: 500; letter-spacing: .1em; }
+.copyright { padding: 0 24px 32px; text-align: center; font-size: 12px; letter-spacing: .12em; color: #45413B; }
+
+/* ---------- フェードイン ---------- */
+.js .fade { opacity: 0; transform: translateY(32px); transition: opacity .9s ease, transform .9s ease; }
+.js .fade.is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .fade { opacity: 1; transform: none; transition: none; }
+  .hero-slide { transition: none; }
+}
+
+/* ---------- スマホ ---------- */
+@media (max-width: 760px) {
+  .brand img { height: 40px; }
+  .site-header .container { gap: 4px 12px; padding-top: 8px; padding-bottom: 6px; }
+  .brand span { font-size: 12px; }
+  .btn-store { margin-left: auto; padding: 10px 14px; font-size: 12px; }
+  .nav { order: 3; width: 100%; margin-left: 0; justify-content: space-around; gap: 4px 12px; font-size: 13px; }
+  .nav a { padding: 8px 4px; }
+  .hero-frame { height: 72vh; min-height: 460px; }
+  .hero h1 { font-size: 34px; }
+  .hero-sub { font-size: 15px; }
+  .hero-copy .container { padding-bottom: 56px; }
+  .hero-arrow { width: 44px; height: 44px; font-size: 18px; }
+  .section { padding-top: 88px; }
+  .section:last-of-type { padding-bottom: 88px; }
+  .section-title { font-size: 26px; margin-bottom: 36px; }
+  .lead { margin-top: -20px; }
+  .card h3, .card .card-title { font-size: 22px; }
+  .concepts { gap: 64px; }
+  .concept-no { font-size: 56px; }
+  .concept-body h3, .item-block h2 { font-size: 24px; }
+  .band { height: 360px; margin-top: 88px; }
+  .band p { font-size: 20px; padding: 20px 24px; }
+  .btn-main { padding: 18px 32px; }
+  .page-head { padding-top: 64px; }
+  .page-head h1 { font-size: 30px; }
+  .prose h2 { font-size: 22px; }
+  .news-list a { padding: 22px 4px; }
+  .news-date, .news-title { font-size: 16px; }
+  .article dl { grid-template-columns: 1fr; gap: 4px; }
+  .article dd { margin-bottom: 12px; }
+}
