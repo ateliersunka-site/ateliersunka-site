@@ -126,7 +126,7 @@ p { margin: 0; }
 .concept.reverse { flex-wrap: wrap-reverse; }
 .concept-media { flex: 1 1 440px; }
 .concept-body { flex: 1 1 320px; display: flex; flex-direction: column; gap: 16px; }
-.concept-no { font-size: 72px; font-weight: 900; letter-spacing: .02em; color: var(--red); line-height: 1; }
+.concept-body .concept-no { font-size: 72px; font-weight: 900; letter-spacing: .02em; color: var(--red); line-height: 1; }
 .concept-body h3 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: .14em; }
 .concept-body p { font-size: 16px; color: var(--text-sub); }
 
@@ -235,7 +235,7 @@ p { margin: 0; }
   .lead { margin-top: -20px; }
   .card h3, .card .card-title { font-size: 22px; }
   .concepts { gap: 64px; }
-  .concept-no { font-size: 56px; }
+  .concept-body .concept-no { font-size: 56px; }
   .concept-body h3, .item-block h2 { font-size: 24px; }
   .band { height: 360px; margin-top: 88px; }
   .band p { font-size: 20px; padding: 20px 24px; }
