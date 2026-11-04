@@ -253,6 +253,6 @@ p { margin: 0; }
 }
 
 /* とても狭いスマホでは、ロゴ横の文字を隠してヘッダーを2段に収める */
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .brand span { display: none; }
 }
