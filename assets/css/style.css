@@ -182,6 +182,27 @@ p { margin: 0; }
 }
 .product-arrow:hover { opacity: .72; }
 
+/* ---------- 購入前に知りたいこと（guide.html） ---------- */
+.page-head { padding-top: 96px; text-align: center; }
+.page-head h1 { margin: 8px 0 0; font-size: 36px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; }
+.guide-layout { display: grid; grid-template-columns: 200px 1fr; gap: 72px; padding-top: 80px; padding-bottom: 128px; }
+.guide-toc { position: sticky; top: 112px; align-self: start; }
+.guide-toc-title { font-size: 13px; font-weight: 700; letter-spacing: .3em; color: var(--indigo); margin-bottom: 16px; }
+.guide-toc ul { margin: 0; padding: 0; list-style: none; border-left: 1px solid var(--line); }
+.guide-toc a { display: block; padding: 10px 0 10px 20px; margin-left: -1px; border-left: 2px solid transparent; font-size: 15px; font-weight: 500; letter-spacing: .12em; color: var(--text-sub); }
+.guide-toc a[aria-current="true"] { border-left-color: var(--indigo); color: var(--text); font-weight: 700; }
+.guide-main { max-width: 760px; }
+.guide-sec + .guide-sec { margin-top: 96px; padding-top: 96px; border-top: 1px solid var(--line); }
+.guide-sec h2 { margin: 0 0 24px; font-size: 28px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; }
+.guide-sec h3 { margin: 48px 0 20px; font-size: 20px; font-weight: 700; letter-spacing: .12em; }
+.guide-sec p { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
+.guide-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.guide-photos.single { grid-template-columns: minmax(0, 480px); }
+.guide-sec .guide-note { margin-top: 16px; font-size: 14px; }
+.guide-sec .guide-link { margin-top: 20px; font-size: 15px; font-weight: 700; letter-spacing: .08em; }
+.guide-link a { color: var(--indigo); }
+.guide-main .btn-row { margin-top: 96px; }
+
 /* ---------- フッター ---------- */
 .site-footer { background: var(--gray-bg); border-top: 4px solid var(--indigo); }
 .site-footer .container {
@@ -236,6 +257,19 @@ p { margin: 0; }
   .product-track { gap: 16px; }
   .product-card { flex-basis: 78%; }
   .product-card h3 { font-size: 18px; }
+  .page-head { padding-top: 64px; }
+  .page-head h1 { font-size: 26px; }
+  .guide-layout { display: block; padding-top: 40px; padding-bottom: 88px; }
+  .guide-toc { top: var(--header-h, 88px); z-index: 40; margin: 0 -24px 48px; padding: 0 24px; background: var(--white); border-bottom: 1px solid var(--line); }
+  .guide-toc-title { display: none; }
+  .guide-toc ul { display: flex; justify-content: space-between; border-left: 0; }
+  .guide-toc a { padding: 12px 0; margin: 0; border-left: 0; border-bottom: 2px solid transparent; font-size: 13px; letter-spacing: .06em; }
+  .guide-toc a[aria-current="true"] { border-bottom-color: var(--indigo); }
+  .guide-sec + .guide-sec { margin-top: 64px; padding-top: 64px; }
+  .guide-sec h2 { font-size: 22px; }
+  .guide-sec p { line-height: 2; }
+  .guide-photos { grid-template-columns: 1fr; }
+  [data-toc-page] [id] { scroll-margin-top: 150px; }
 }
 
 /* とても狭いスマホでは、ロゴ横の文字を隠してヘッダーを2段に収める */

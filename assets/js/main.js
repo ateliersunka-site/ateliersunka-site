@@ -15,6 +15,26 @@
     fades.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // 購入前に知りたいこと：目次の「今いる場所」に印をつける
+  var toc = document.querySelector('[data-toc]');
+  if (toc) {
+    document.body.setAttribute('data-toc-page', '');
+    var header = document.querySelector('.site-header');
+    var setH = function () { document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px'); };
+    setH(); window.addEventListener('resize', setH);
+    var links = toc.querySelectorAll('a');
+    var secs = [];
+    links.forEach(function (a) { var t = document.querySelector(a.getAttribute('href')); if (t) secs.push([t, a]); });
+    var mark = function () {
+      var line = header.offsetHeight + toc.offsetHeight + 40, cur = secs[0];
+      secs.forEach(function (p) { if (p[0].getBoundingClientRect().top <= line) cur = p; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = secs[secs.length - 1];
+      links.forEach(function (a) { a.setAttribute('aria-current', a === cur[1] ? 'true' : 'false'); });
+    };
+    window.addEventListener('scroll', mark, { passive: true });
+    mark();
+  }
+
   // 商品の横スライダー（自動で1枚ずつ進む／矢印／指でスワイプ）
   var slider = document.querySelector('[data-slider]');
   if (slider) {
