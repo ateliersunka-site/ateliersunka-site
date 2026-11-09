@@ -179,6 +179,8 @@ p { margin: 0; }
 .prose li { position: relative; padding-left: 20px; font-size: 16px; color: var(--text-sub); }
 .prose li::before { content: ""; position: absolute; left: 0; top: .8em; width: 8px; height: 8px; background: var(--indigo); }
 .prose li strong { color: var(--text); font-weight: 700; }
+.prose ul.no-mark li { padding-left: 0; }
+.prose ul.no-mark li::before { content: none; }
 
 .item-block { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center; }
 .item-block.reverse { flex-wrap: wrap-reverse; }
