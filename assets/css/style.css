@@ -240,11 +240,6 @@ body.drawer-open { overflow: hidden; }
 .guide-photos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .guide-photos.single { grid-template-columns: minmax(0, 480px); }
 .guide-sec .guide-note { margin-top: 16px; font-size: 14px; }
-.size-figs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
-.size-figs img { width: 100%; height: auto; }
-.size-steps { margin: 28px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; }
-.size-steps li { display: flex; gap: 16px; align-items: baseline; }
-.size-no { flex: none; font-size: 14px; font-weight: 700; letter-spacing: .12em; color: var(--indigo); }
 .guide-sec .guide-link { margin-top: 20px; font-size: 15px; font-weight: 700; letter-spacing: .08em; }
 .guide-link a { color: var(--indigo); }
 .guide-main .btn-row { margin-top: 96px; }
@@ -333,7 +328,6 @@ body.drawer-open { overflow: hidden; }
   .wash-step h4 { font-size: 15px; letter-spacing: .06em; margin-bottom: 6px; }
   .guide-sec .wash-body p { font-size: 13px; line-height: 1.85; }
   .guide-sec .wash-body .wash-note { font-size: 12px; margin-top: 6px; }
-  .size-figs { grid-template-columns: 1fr; max-width: 300px; }
   [data-toc-page] [id] { scroll-margin-top: 150px; }
 }
 
