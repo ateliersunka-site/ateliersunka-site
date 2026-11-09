@@ -156,49 +156,31 @@ p { margin: 0; }
 /* ---------- Instagram ---------- */
 .insta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; }
 
-/* ---------- お知らせ ---------- */
-.news-list { max-width: 920px; margin: 0 auto; border-top: 2px solid var(--indigo); padding: 0; list-style: none; }
-.news-list li { border-bottom: 1px solid #D6D6D3; }
-.news-list a { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 32px; padding: 28px 8px; }
-.news-date { font-size: 18px; font-weight: 700; letter-spacing: .08em; color: var(--indigo); min-width: 140px; }
-.news-title { font-size: 18px; font-weight: 700; flex: 1 1 240px; }
-.news-type { font-size: 15px; color: var(--text-sub); }
-.news-empty { padding: 40px 8px; text-align: center; color: var(--text-sub); font-size: 15px; line-height: 2; }
-.more { display: flex; justify-content: center; margin-top: 40px; font-size: 15px; font-weight: 700; letter-spacing: .16em; }
+/* ---------- わたしたち ---------- */
+.about { max-width: 760px; margin: 0 auto; text-align: center; }
+.about-lead { margin: 16px 0 40px; font-size: 30px; font-weight: 700; letter-spacing: .14em; line-height: 1.8; }
+.about p:not(.label) { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
+.about p + p { margin-top: 1.4em; }
+.about .about-more { margin-top: 40px; font-size: 15px; font-weight: 700; letter-spacing: .12em; }
+.about-more a { color: var(--indigo); }
 
-/* ---------- 下層ページ ---------- */
-.page-head { padding: 96px 0 0; text-align: center; }
-.page-head h1 { margin: 8px 0 0; font-size: 40px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; }
-.page-head .page-lead { margin-top: 24px; font-size: 18px; font-weight: 500; letter-spacing: .16em; line-height: 2; color: var(--text-sub); }
-
-.prose { max-width: 760px; margin: 0 auto; }
-.prose h2 { margin: 0 0 32px; font-size: 28px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; }
-.prose p { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
-.prose p + p { margin-top: 1.4em; }
-
-/* 見出し＋説明の組み（ものづくりの姿勢・シリーズ紹介） */
-.points { margin: 0; display: flex; flex-direction: column; }
-.points dt { font-size: 17px; font-weight: 700; letter-spacing: .12em; color: var(--text); line-height: 1.8; }
-.points dt:not(:first-child) { margin-top: 2em; }
-.points dd { margin: 6px 0 0; font-size: 16px; line-height: 2.1; color: var(--text-sub); }
-
-.item-block { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center; }
-.item-block.reverse { flex-wrap: wrap-reverse; }
-.item-block .item-media { flex: 1 1 420px; }
-.item-block .item-body { flex: 1 1 340px; display: flex; flex-direction: column; gap: 24px; }
-.item-block h2 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: .14em; }
-.item-block p { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
-.item-block .points { margin: 4px 0 8px; }
-.item-block .btn-main { align-self: flex-start; padding: 16px 40px; font-size: 15px; }
-
-.photo-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-
-/* お知らせ詳細 */
-.article { max-width: 760px; margin: 0 auto; }
-.article-meta { display: flex; gap: 24px; justify-content: center; font-size: 15px; color: var(--indigo); font-weight: 700; letter-spacing: .08em; }
-.article dl { margin: 32px 0 0; display: grid; grid-template-columns: 8em 1fr; gap: 12px 16px; font-size: 16px; }
-.article dt { font-weight: 700; }
-.article dd { margin: 0; color: var(--text-sub); }
+/* ---------- アイテム（横スライダー） ---------- */
+.product-track {
+  display: flex; gap: 24px; margin: 0; padding: 0; list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.product-track::-webkit-scrollbar { display: none; }
+.product-card { flex: 0 0 calc((100% - 48px) / 3); scroll-snap-align: start; display: flex; flex-direction: column; gap: 6px; }
+.product-card a { margin-bottom: 12px; }
+.product-card h3 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: .1em; }
+.product-card p { font-size: 14px; color: var(--text-sub); }
+.product-nav { display: flex; justify-content: flex-end; gap: 8px; margin-top: 24px; }
+.product-arrow {
+  width: 48px; height: 48px; border: 0; background: var(--indigo); color: var(--white);
+  font-size: 20px; cursor: pointer; font-family: inherit;
+}
+.product-arrow:hover { opacity: .72; }
 
 /* ---------- フッター ---------- */
 .site-footer { background: var(--gray-bg); border-top: 4px solid var(--indigo); }
@@ -220,6 +202,7 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   .js .fade { opacity: 1; transform: none; transition: none; }
   .hero-slide { transition: none; }
+  .product-track { scroll-behavior: auto; }
 }
 
 /* ---------- スマホ ---------- */
@@ -242,19 +225,17 @@ p { margin: 0; }
   .card h3, .card .card-title { font-size: 22px; }
   .concepts { gap: 64px; }
   .concept-body .concept-no { font-size: 56px; }
-  .concept-body h3, .item-block h2 { font-size: 24px; }
+  .concept-body h3 { font-size: 24px; }
   .band { height: 360px; margin-top: 88px; }
   .band p { font-size: 20px; padding: 20px 24px; }
   .btn-main { padding: 18px 32px; }
-  .page-head { padding-top: 64px; }
-  .page-head h1 { font-size: 30px; }
-  .prose h2 { font-size: 22px; margin-bottom: 24px; }
-  .prose p, .points dd, .item-block p { line-height: 2; }
-  .page-head .page-lead { font-size: 16px; }
-  .news-list a { padding: 22px 4px; }
-  .news-date, .news-title { font-size: 16px; }
-  .article dl { grid-template-columns: 1fr; gap: 4px; }
-  .article dd { margin-bottom: 12px; }
+  .about-lead { font-size: 19px; letter-spacing: .08em; margin-bottom: 32px; }
+  .about .about-more { font-size: 13px; letter-spacing: .06em; }
+  .about p:not(.label) { line-height: 2; text-align: left; }
+  .about .about-more { text-align: center; }
+  .product-track { gap: 16px; }
+  .product-card { flex-basis: 78%; }
+  .product-card h3 { font-size: 18px; }
 }
 
 /* とても狭いスマホでは、ロゴ横の文字を隠してヘッダーを2段に収める */

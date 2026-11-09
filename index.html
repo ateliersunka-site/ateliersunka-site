@@ -39,19 +39,18 @@
 }
 </script>
 </head>
-<body>
+<body id="top">
 
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="./" aria-label="atelier Sunka トップへ">
+    <a class="brand" href="#top" aria-label="atelier Sunka ページの先頭へ">
       <img src="assets/images/logo.png" alt="Sunka ロゴ" width="58" height="52">
       <span>atelier Sunka</span>
     </a>
     <nav class="nav" aria-label="メインメニュー">
-      <a href="about.html">わたしたち</a>
-      <a href="news/">お知らせ</a>
-      <a href="items.html">アイテム</a>
-      <a href="items.html#guide">購入前に</a>
+      <a href="#about">わたしたち</a>
+      <a href="#product">アイテム</a>
+      <a href="#guide">購入前に</a>
     </nav>
     <a class="btn-store" href="https://ateliersunka.base.shop/">ONLINE STORE</a>
   </div>
@@ -59,7 +58,7 @@
 
 <main>
 
-  <!-- スライド -->
+  <!-- 1. スライド -->
   <section class="hero" data-hero aria-label="写真のスライド">
     <div class="hero-frame">
       <img class="hero-slide is-active" src="assets/images/mountain.jpg" alt="帽子をかぶって山道を歩く後ろ姿">
@@ -82,7 +81,18 @@
     </div>
   </section>
 
-  <!-- 場面 -->
+  <!-- 2. わたしたち -->
+  <section class="section container fade" id="about" aria-labelledby="about-h">
+    <div class="about">
+      <p class="label">ABOUT</p>
+      <h2 class="about-lead" id="about-h">暮らしの中で、<br>心地よくいつもそばにあるものを</h2>
+      <p>atelier Sunka（アトリエ サンカ）は、帽子を中心に、暮らしの道具をつくるブランドです。<br>デザインから素材選び、縫製まで、すべてをひとりで手がけています。</p>
+      <p>個性的であることより、素朴であること。<br>心地よく使えることを、なにより大切にしています。</p>
+      <p class="about-more"><a href="https://note.com/ateliersunka">ものづくりのこと、note で綴っています →</a></p>
+    </div>
+  </section>
+
+  <!-- 3. 場面 -->
   <section class="section container fade" aria-labelledby="scene-h">
     <p class="label">SCENE</p>
     <h2 class="section-title" id="scene-h">暮らしの中で、街の中で</h2>
@@ -100,7 +110,7 @@
     </div>
   </section>
 
-  <!-- 理念 -->
+  <!-- 4. 大切にしていること -->
   <section class="section container" aria-labelledby="concept-h">
     <p class="label fade">CONCEPT</p>
     <h2 class="section-title fade" id="concept-h">大切にしていること</h2>
@@ -110,14 +120,14 @@
         <div class="concept-body">
           <p class="concept-no">01</p>
           <h3>素材</h3>
-          <p>肌に触れるものだから、天然素材の心地よさを大切にしています。</p>
+          <p>綿やリネン、ウールなど、天然素材を中心に選んでいます。<br>肌にやさしくなじみ、洗うたびにやわらかくなっていく、タフな素材です。</p>
         </div>
       </div>
       <div class="concept reverse fade">
         <div class="concept-body">
           <p class="concept-no">02</p>
           <h3>ひとりで、ひとつずつ</h3>
-          <p>作家ひとりが、最初から最後まで。<br>ひとつひとつに向き合う時間を大切にしています。</p>
+          <p>デザインから裁断、縫製、仕上げまで。<br>たくさん、早くつくるよりも、ひとつひとつと丁寧に向き合う時間を大切にしています。</p>
         </div>
         <div class="concept-media"><div class="ph ratio-3-2">写真準備中：ミシンで縫う手元</div></div>
       </div>
@@ -126,46 +136,64 @@
         <div class="concept-body">
           <p class="concept-no">03</p>
           <h3>使って育てる</h3>
-          <p>使うほど、あなたの道具になっていく。<br>それぞれの変化を楽しむ「セルフヴィンテージ」をテーマに、ものづくりをしています。</p>
+          <p>日常的に使う。メンテナンスをする。それを繰り返す。<br>そのたびに、色や形が変わっていく「セルフヴィンテージ」を、お楽しみください。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 写真帯 -->
+  <!-- 5. 写真帯 -->
   <section class="band fade" aria-label="コンセプトの一文">
     <img src="assets/images/mountain.jpg" alt="" loading="lazy">
     <p>時代に合わせすぎない、<br>ちょうどいい日常を。</p>
   </section>
 
-  <!-- アイテム -->
-  <section class="section container fade" aria-labelledby="items-h">
-    <p class="label">ITEMS</p>
-    <h2 class="section-title" id="items-h">アイテム</h2>
-    <div class="grid-2">
-      <a class="card" href="items.html#hat">
-        <img class="ratio-1-1" src="assets/images/cap-sq.jpg" alt="デニムのキャップ" loading="lazy">
-        <span class="card-title">帽子</span>
-        <span class="card-text">男女どちらでもかぶれる、ユニセックス仕様。</span>
-      </a>
-      <a class="card" href="items.html#wood">
-        <div class="ph ratio-1-1">写真準備中：木工小物</div>
-        <span class="card-title">木工小物</span>
-        <span class="card-text">手元に置いて、毎日使う。</span>
-      </a>
+  <!-- 6. アイテム（横スライダー）
+       商品を足すとき：<li class="product-card"> … </li> をまるごとコピーして、
+       写真・商品名・素材・BASEの商品ページURLを書き換える。価格はのせない。 -->
+  <section class="section container fade" id="product" aria-labelledby="product-h">
+    <p class="label">PRODUCT</p>
+    <h2 class="section-title" id="product-h">アイテム</h2>
+    <p class="lead">定番の形を、作り重ねています。</p>
+    <div class="product-slider" data-slider>
+      <ul class="product-track" aria-label="商品の一覧（横にスクロールできます）">
+        <li class="product-card">
+          <a href="https://ateliersunka.base.shop/items/144287033"><img class="ratio-1-1" src="assets/images/mountain-sq.jpg" alt="Mountain shade hat / blue" loading="lazy"></a>
+          <h3>Mountain shade hat</h3>
+          <p>オーガニックデニム 8オンス</p>
+        </li>
+        <li class="product-card">
+          <a href="https://ateliersunka.base.shop/items/130645475"><img class="ratio-1-1" src="assets/images/cap-sq.jpg" alt="Sunka Cap / camel" loading="lazy"></a>
+          <h3>Sunka Cap</h3>
+          <p>オーガニックデニム 8オンス</p>
+        </li>
+        <li class="product-card">
+          <a href="https://ateliersunka.base.shop/items/163882755"><img class="ratio-1-1" src="assets/images/garden-sq.jpg" alt="Touge hat / ecru" loading="lazy"></a>
+          <h3>Touge hat</h3>
+          <p>国産カツラギ（綿100%）</p>
+        </li>
+        <li class="product-card">
+          <a href="https://ateliersunka.base.shop/items/163880977"><img class="ratio-1-1" src="assets/images/city-sq.jpg" alt="Yamanami cap / gray" loading="lazy"></a>
+          <h3>Yamanami cap</h3>
+          <p>ダブルメルトン（ウール混）</p>
+        </li>
+      </ul>
+      <div class="product-nav">
+        <button class="product-arrow prev" type="button" aria-label="前の商品">‹</button>
+        <button class="product-arrow next" type="button" aria-label="次の商品">›</button>
+      </div>
     </div>
     <div class="btn-row"><a class="btn-main" href="https://ateliersunka.base.shop/">ONLINE STOREで見る</a></div>
   </section>
 
-  <!-- 購入前に知りたいこと -->
-  <section class="section container fade" aria-labelledby="guide-h">
+  <!-- 7. 購入前に知りたいこと -->
+  <section class="section container fade" id="guide" aria-labelledby="guide-h">
     <p class="label">GUIDE</p>
     <h2 class="section-title" id="guide-h">購入前に知りたいこと</h2>
     <div class="guide">
       <div class="guide-item">
         <h3>お手入れ</h3>
         <p>基本はご自宅で洗えます。ウールを使った商品はドライクリーニングをおすすめします。</p>
-        <a href="items.html#care">お手入れについて →</a>
       </div>
       <div class="guide-item">
         <h3>サイズ</h3>
@@ -185,11 +213,11 @@
     </div>
   </section>
 
-  <!-- Instagram -->
+  <!-- 8. Instagram -->
   <section class="section container fade" aria-labelledby="insta-h">
     <p class="label">INSTAGRAM</p>
     <h2 class="section-title" id="insta-h">@atelier_sunka25</h2>
-    <p class="lead">使う様子や、日々の制作のこと。</p>
+    <p class="lead">使う様子や、日々の制作のこと。<br>出店のお知らせも、こちらでお届けしています。</p>
     <div class="insta-grid">
       <a href="https://www.instagram.com/atelier_sunka25/"><img class="ratio-1-1" src="assets/images/garden-sq.jpg" alt="Instagramの投稿：庭仕事の様子" loading="lazy"></a>
       <a href="https://www.instagram.com/atelier_sunka25/"><img class="ratio-1-1" src="assets/images/cap-sq.jpg" alt="Instagramの投稿：デニムのキャップ" loading="lazy"></a>
@@ -201,17 +229,6 @@
     <div class="btn-row"><a class="btn-line" href="https://www.instagram.com/atelier_sunka25/">フォローする</a></div>
   </section>
 
-  <!-- お知らせ（最新3件。news/index.html と同じ内容を上から3件までのせる） -->
-  <section class="section container fade" aria-labelledby="news-h">
-    <p class="label">NEWS</p>
-    <h2 class="section-title" id="news-h">お知らせ</h2>
-    <p class="lead">出店情報や新作のことをお知らせします。</p>
-    <ul class="news-list">
-      <li class="news-empty">お知らせは準備中です。出店情報はInstagramでもお知らせしています。</li>
-    </ul>
-    <p class="more"><a href="news/">一覧を見る →</a></p>
-  </section>
-
 </main>
 
 <footer class="site-footer">
@@ -221,13 +238,13 @@
       <span>atelier Sunka</span>
     </div>
     <nav class="footer-nav" aria-label="フッターメニュー">
-      <a href="about.html">わたしたち</a>
-      <a href="news/">お知らせ</a>
-      <a href="items.html">アイテム</a>
-      <a href="items.html#guide">購入前に</a>
+      <a href="#about">わたしたち</a>
+      <a href="#product">アイテム</a>
+      <a href="#guide">購入前に</a>
       <a href="https://ateliersunka.base.shop/">ONLINE STORE</a>
       <a href="https://www.instagram.com/atelier_sunka25/">Instagram</a>
       <a href="https://note.com/ateliersunka">note</a>
+      <a href="#top">ページの先頭へ ↑</a>
     </nav>
   </div>
   <p class="copyright">© 2026 atelier Sunka</p>

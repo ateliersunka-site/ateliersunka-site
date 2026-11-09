@@ -1,4 +1,4 @@
-// atelier Sunka 公式サイト：スライドとフェードイン
+// atelier Sunka 公式サイト：スライド・商品スライダー・フェードイン
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -13,6 +13,48 @@
     fades.forEach(function (el) { io.observe(el); });
   } else {
     fades.forEach(function (el) { el.classList.add('is-visible'); });
+  }
+
+  // 商品の横スライダー（自動で1枚ずつ進む／矢印／指でスワイプ）
+  var slider = document.querySelector('[data-slider]');
+  if (slider) {
+    var track = slider.querySelector('.product-track');
+    var cards = track.querySelectorAll('.product-card');
+    var nav = slider.querySelector('.product-nav');
+    if (cards.length < 2) {
+      nav.hidden = true;
+    } else {
+      var autoTimer = null, paused = false, resumeTimer = null;
+      var step = function () {
+        var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+        return cards[0].getBoundingClientRect().width + gap;
+      };
+      var atEnd = function () { return track.scrollLeft + track.clientWidth >= track.scrollWidth - 4; };
+      var go = function (dir) {
+        if (dir > 0 && atEnd()) { track.scrollTo({ left: 0 }); return; }
+        if (dir < 0 && track.scrollLeft <= 4) { track.scrollTo({ left: track.scrollWidth }); return; }
+        track.scrollBy({ left: dir * step() });
+      };
+      var startAuto = function () {
+        if (reduce) return;
+        clearInterval(autoTimer);
+        autoTimer = setInterval(function () { if (!paused) go(1); }, 4500);
+      };
+      var pause = function () { paused = true; clearTimeout(resumeTimer); };
+      var resume = function (delay) {
+        clearTimeout(resumeTimer);
+        resumeTimer = setTimeout(function () { paused = false; }, delay || 0);
+      };
+      slider.querySelector('.product-arrow.prev').addEventListener('click', function () { go(-1); startAuto(); });
+      slider.querySelector('.product-arrow.next').addEventListener('click', function () { go(1); startAuto(); });
+      slider.addEventListener('mouseenter', pause);
+      slider.addEventListener('mouseleave', function () { resume(0); });
+      slider.addEventListener('focusin', pause);
+      slider.addEventListener('focusout', function () { resume(0); });
+      track.addEventListener('touchstart', pause, { passive: true });
+      track.addEventListener('touchend', function () { resume(6000); }, { passive: true });
+      startAuto();
+    }
   }
 
   // トップのスライド
