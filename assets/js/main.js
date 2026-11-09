@@ -91,7 +91,7 @@
       var startAuto = function () {
         if (reduce) return;
         clearInterval(autoTimer);
-        autoTimer = setInterval(function () { if (!paused) go(1); }, 4500);
+        autoTimer = setInterval(function () { if (!paused) go(1); }, 3000);
       };
       var pause = function () { paused = true; clearTimeout(resumeTimer); };
       var resume = function (delay) {
