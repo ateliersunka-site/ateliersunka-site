@@ -1,33 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-<defs>
-  <filter id="w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="2"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter>
-  <filter id="p"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 0.2 0 0 0 0 0.19 0 0 0 0 0.17 0 0 0 0.07 0"/></filter>
-  <pattern id="h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#34465A" stroke-width=".7"/></pattern>
-  <pattern id="g" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-50)"><line x1="0" y1="0" x2="0" y2="5" stroke="#33302C" stroke-width=".5"/></pattern>
-</defs>
-<rect width="400" height="300" fill="#EFE6DA"/>
-<rect width="400" height="300" filter="url(#p)"/>
-<g filter="url(#w)" fill="none" stroke="#33302C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#34465A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect width="400" height="300" fill="#EFE6DA" stroke="none"/>
 
-  
-  <path d="M135 40 L135 200 M40 120 L230 120" stroke-width="1"/>
-  <path d="M40 40 L230 40 L230 200 L40 200 Z" stroke-width="1.6"/>
-  <path d="M60 60 C80 74 92 96 96 116 M70 64 q-4 12 6 18 M80 76 q14 -2 16 8 M86 94 q-8 8 2 14" stroke-width=".8"/>
-  <path d="M160 140 C176 150 186 168 190 190 M172 150 q10 -6 18 2 M180 168 q-10 6 -2 14" stroke-width=".8"/>
-  <path d="M20 214 L380 214 L380 226 L20 226 Z" fill="#FFFFFF"/>
-  <path d="M30 220 L120 220 M200 220 L300 220" stroke-width=".6"/>
-  <path d="M206 214 C206 160 330 160 330 214" fill="#FFFFFF"/>
-  <path d="M220 200 l0 0 M236 186 l0 0 M256 178 l0 0 M280 178 l0 0 M300 186 l0 0 M316 200 l0 0" stroke-width="3.2"/>
-  <path d="M196 196 C196 132 336 130 340 196 Z" fill="#FFFFFF"/>
-  <path d="M196 196 C196 132 336 130 340 196 Z" fill="url(#h)"/>
-  <path d="M196 196 C196 132 336 130 340 196 Z"/>
-  <path d="M268 140 L268 196" stroke-width=".8"/>
-  <circle cx="268" cy="139" r="3.5" fill="#33302C"/>
-  <path d="M330 196 C354 198 372 204 376 214" />
-  <path d="M86 214 L80 176 L112 176 L106 214 Z" fill="#FFFFFF"/>
-  <path d="M96 176 C94 150 86 136 72 128 M96 164 C104 146 116 140 128 138 M90 150 C82 148 76 140 74 132" stroke-width="1"/>
-  <path d="M72 128 C66 124 64 116 70 114 C76 116 76 124 72 128 M128 138 C134 132 142 134 140 140 C136 144 130 142 128 138" fill="#FFFFFF" stroke-width="1"/>
-  <path d="M290 80 q14 -6 28 0 M300 98 q14 -6 28 0 M310 62 q10 -4 20 0" stroke-width=".8"/>
-
+  <circle cx="92" cy="78" r="30" fill="#FFFFFF"/>
+  <path d="M52 100 q0 -26 28 -24 q10 -22 36 -14 q26 -6 32 18 q22 2 20 20 Z" fill="#EFE6DA"/>
+  <path d="M52 100 q0 -26 28 -24 q10 -22 36 -14 q26 -6 32 18 q22 2 20 20 Z" fill="#FFFFFF"/>
+  <path d="M260 90 q20 -8 40 0 M248 112 q26 -10 52 0 M268 134 q16 -6 32 0" stroke-width="3"/>
+  <path d="M110 250 L310 250" />
+  <path d="M130 250 C130 175 290 175 290 250" fill="#FFFFFF" stroke-width="3"/>
+  <path d="M150 232 l0 0 M175 214 l0 0 M205 205 l0 0 M235 205 l0 0 M262 214 l0 0 M282 232 l0 0" stroke-width="7"/>
+  <g transform="translate(122 206) scale(1.15)">
+  <path d="M0 0 C0 -78 150 -78 150 0 Z" fill="#FFFFFF"/>
+  <path d="M75 -59 L75 0" stroke-width="3"/>
+  <circle cx="75" cy="-60" r="5" fill="#34465A"/>
+  <path d="M140 0 C175 2 205 10 215 24 C185 24 155 18 132 8" fill="#FFFFFF"/>
+  <path d="M0 0 L150 0" />
 </g>
+
 </svg>

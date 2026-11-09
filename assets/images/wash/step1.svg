@@ -1,37 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-<defs>
-  <filter id="w" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.4"/></filter>
-  <filter id="p"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 0.2 0 0 0 0 0.19 0 0 0 0 0.17 0 0 0 0.07 0"/></filter>
-  <pattern id="h" width="4.5" height="4.5" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><line x1="0" y1="0" x2="0" y2="4.5" stroke="#34465A" stroke-width=".7"/></pattern>
-  <pattern id="g" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-50)"><line x1="0" y1="0" x2="0" y2="5" stroke="#33302C" stroke-width=".5"/></pattern>
-</defs>
-<rect width="400" height="300" fill="#EFE6DA"/>
-<rect width="400" height="300" filter="url(#p)"/>
-<g filter="url(#w)" fill="none" stroke="#33302C" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none" stroke="#34465A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<rect width="400" height="300" fill="#EFE6DA" stroke="none"/>
 
-  <path d="M62 196 C64 140 146 112 206 118 C262 124 300 158 298 200 C296 236 248 252 180 250 C110 248 60 234 62 196 Z" fill="url(#h)"/>
-  <path d="M62 196 C64 140 146 112 206 118 C262 124 300 158 298 200 C296 236 248 252 180 250 C110 248 60 234 62 196 Z"/>
-  <path d="M80 196 C84 152 150 132 204 136 C254 140 282 168 280 200 C278 228 236 238 180 236 C122 234 78 224 80 196 Z" fill="#FFFFFF"/>
-  <path d="M92 190 C100 160 150 146 200 148 C246 150 270 172 268 196" stroke-width="1" stroke-dasharray="3 3"/>
-  <path d="M110 170 q8 -6 18 -8 M150 156 q10 -2 20 -2" stroke="#34465A" stroke-width="2.2" opacity=".55"/>
-  <path d="M178 186 L180 236 M128 222 L160 186 M232 224 L200 186"  stroke-width=".8"/>
-  <path d="M298 200 C320 212 346 214 360 208 C352 228 324 238 290 226" fill="#FFFFFF"/>
-  <g transform="rotate(-28 210 120)">
-    <rect x="156" y="112" width="128" height="10" rx="5" fill="#FFFFFF"/>
-    <path d="M160 112 L160 100 M165 112 L165 100 M170 112 L170 100 M175 112 L175 100 M180 112 L180 100" stroke-width="1"/>
-    <path d="M300 96 L344 84 L352 116 L308 128" fill="#FFFFFF"/>
-    <path d="M300 96 L308 128" />
-    <path d="M314 94 L346 86 M318 110 L350 102" stroke-width=".6"/>
-    <path d="M240 106 C240 97 250 92 262 93 L286 95 C298 96 304 106 300 116 C306 124 302 136 290 136 L256 137 C244 137 237 130 239 121 Z" fill="#FFFFFF"/>
-    <path d="M250 123 C249 130 253 136 260 136 M263 123 C262 130 266 136 273 136 M276 122 C275 129 279 135 286 135" stroke-width="1"/>
-    <path d="M249 123 C258 120 270 120 290 118" stroke-width=".8"/>
-    <path d="M246 103 C236 102 226 104 220 108 C218 112 226 115 236 113 L250 111" fill="#FFFFFF"/>
-    <path d="M226 106 C228 108 228 111 226 113" stroke-width=".7"/>
+  <ellipse cx="170" cy="170" rx="125" ry="70" fill="#FFFFFF"/>
+  <ellipse cx="170" cy="170" rx="104" ry="54"/>
+  <path d="M90 150 q10 -8 22 -10" stroke-width="5" stroke-dasharray="2 9"/>
+  <path d="M120 128 q14 -5 30 -6" stroke-width="5" stroke-dasharray="2 9"/>
+  <g transform="rotate(-32 270 120)">
+    <rect x="200" y="112" width="140" height="16" rx="8" fill="#FFFFFF"/>
+    <path d="M206 112 L206 96 M214 112 L214 96 M222 112 L222 96 M230 112 L230 96 M238 112 L238 96" stroke-width="3"/>
   </g>
-    <path d="M332 150 L332 122 C332 116 336 112 342 112 L352 112 C358 112 362 116 362 122 L362 150 C362 156 358 160 352 160 L342 160 C336 160 332 156 332 150 Z" fill="#FFFFFF"/>
-  <path d="M338 112 L338 102 L356 102 L356 112 M342 102 L342 96 L352 96 L352 102"/>
-  <path d="M338 134 L356 134 M338 140 L350 140" stroke-width=".8"/>
-  <path d="M150 140 q2 -6 6 -8 M162 134 q3 -5 7 -6" stroke-width=".8"/>
+  <rect x="318" y="196" width="46" height="70" rx="12" fill="#FFFFFF"/>
+  <path d="M328 196 L328 182 L354 182 L354 196 M334 182 L334 172 L348 172 L348 182" fill="#FFFFFF"/>
+  <path d="M328 226 L354 226 M328 236 L346 236" stroke-width="3"/>
+  <path d="M182 108 l8 -8 M196 116 l10 -4 M178 96 l2 -10" stroke-width="3"/>
 
-</g>
 </svg>
