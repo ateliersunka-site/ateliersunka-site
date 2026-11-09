@@ -243,6 +243,13 @@ body.drawer-open { overflow: hidden; }
 .guide-sec .guide-link { margin-top: 20px; font-size: 15px; font-weight: 700; letter-spacing: .08em; }
 .guide-link a { color: var(--indigo); }
 .guide-main .btn-row { margin-top: 96px; }
+.wash-steps { margin: 32px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 40px; }
+.wash-step { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
+.wash-step img { width: 100%; height: auto; }
+.wash-no { font-size: 13px; font-weight: 700; letter-spacing: .24em; color: var(--indigo); line-height: 1.6; }
+.wash-step h4 { margin: 4px 0 12px; font-size: 18px; font-weight: 700; letter-spacing: .1em; line-height: 1.6; }
+.guide-sec .wash-step p:not(.wash-no) { font-size: 15px; line-height: 2; }
+.guide-sec .wash-note { margin-top: 10px; font-size: 14px; }
 
 /* ---------- フッター ---------- */
 .site-footer { background: var(--gray-bg); border-top: 4px solid var(--indigo); }
@@ -313,6 +320,8 @@ body.drawer-open { overflow: hidden; }
   .guide-sec h2 { font-size: 22px; }
   .guide-sec p { line-height: 2; }
   .guide-photos { grid-template-columns: 1fr; }
+  .wash-step { grid-template-columns: 1fr; gap: 16px; }
+  .wash-step img { max-width: 300px; }
   [data-toc-page] [id] { scroll-margin-top: 150px; }
 }
 
