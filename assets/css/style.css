@@ -245,9 +245,9 @@ body.drawer-open { overflow: hidden; }
 .guide-main .btn-row { margin-top: 96px; }
 .wash-steps { margin: 32px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 40px; }
 .wash-step { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
-.wash-fig { position: relative; background: var(--tan-bg); padding-top: 26px; }
+.wash-fig { position: relative; }
 .wash-fig img { width: 100%; height: auto; display: block; }
-.wash-no { position: absolute; top: 10px; left: 12px; font-size: 13px; font-weight: 700; letter-spacing: .2em; color: var(--red); line-height: 1; }
+.wash-no { position: absolute; top: 0; left: 0; padding: 10px 12px 8px; background: var(--tan-bg); font-size: 13px; font-weight: 700; letter-spacing: .2em; color: var(--red); line-height: 1; }
 .wash-step h4 { margin: 0 0 10px; font-size: 18px; font-weight: 700; letter-spacing: .1em; line-height: 1.6; }
 .guide-sec .wash-body p { font-size: 15px; line-height: 2; }
 .guide-sec .wash-body .wash-note { margin-top: 10px; font-size: 14px; }
@@ -323,8 +323,7 @@ body.drawer-open { overflow: hidden; }
   .guide-photos { grid-template-columns: 1fr; }
   .wash-steps { gap: 28px; }
   .wash-step { grid-template-columns: 128px 1fr; gap: 14px; }
-  .wash-fig { padding-top: 18px; }
-  .wash-no { top: 6px; left: 7px; font-size: 10px; letter-spacing: .12em; }
+  .wash-no { padding: 6px 7px 5px; font-size: 10px; letter-spacing: .12em; }
   .wash-step h4 { font-size: 15px; letter-spacing: .06em; margin-bottom: 6px; }
   .guide-sec .wash-body p { font-size: 13px; line-height: 1.85; }
   .guide-sec .wash-body .wash-note { font-size: 12px; margin-top: 6px; }
