@@ -25,13 +25,15 @@
 3. 場面：いつもの日に／出かける日に
 4. 大切にしていること：01 素材／02 ひとりで、ひとつずつ／03 使って育てる
 5. 写真帯
-6. アイテム（#product）：商品の横スライダー → ONLINE STORE
+6. PRODUCT（#product）：見出しは英字の PRODUCT だけ → 商品の横スライダー → ONLINE STORE
 7. 購入前に知りたいこと（#guide）
 8. Instagram
 9. フッター（note／ONLINE STORE／Instagram／ページの先頭へ）
 
 メニューの表記：ABOUT（→ #about）／PRODUCT（→ #product）／購入前に（→ guide.html）／ONLINE STORE（→ BASE）
 トップの「購入前に知りたいこと」の4枚のカードは、guide.html の各項目へつなぐ。
+ヘッダーの左に三本線のメニューボタンを置く。押すと左からメニューが開く（ABOUT／PRODUCT／購入前に知りたいこと／ONLINE STORE／Instagram／note）。スマホでは上のメニューの文字は出さず、三本線にまとめる。
+トップだけ、ヘッダーを写真の上に重ねる（文字は白）。写真を過ぎると白い帯に変わる。
 お知らせ（イベント出店など）はサイトにのせず、Instagram でお知らせする。
 
 ### 購入前に知りたいこと（guide.html）

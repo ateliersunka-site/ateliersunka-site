@@ -15,6 +15,39 @@
     fades.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // 三本線のメニュー
+  var menuBtn = document.querySelector('.menu-btn');
+  var drawer = document.getElementById('drawer');
+  if (menuBtn && drawer) {
+    var openMenu = function () {
+      drawer.hidden = false; document.body.classList.add('drawer-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+      drawer.querySelector('.drawer-close').focus();
+    };
+    var closeMenu = function () {
+      drawer.hidden = true; document.body.classList.remove('drawer-open');
+      menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.focus();
+    };
+    menuBtn.addEventListener('click', openMenu);
+    drawer.querySelectorAll('[data-close]').forEach(function (el) { el.addEventListener('click', closeMenu); });
+    drawer.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () {
+      drawer.hidden = true; document.body.classList.remove('drawer-open'); menuBtn.setAttribute('aria-expanded', 'false');
+    }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !drawer.hidden) closeMenu(); });
+  }
+
+  // トップ：写真を過ぎたらヘッダーを白い帯にする
+  var siteHeader = document.querySelector('.site-header');
+  var heroEl = document.querySelector('.has-hero .hero-frame');
+  if (siteHeader && heroEl) {
+    var solid = function () {
+      siteHeader.classList.toggle('is-solid', heroEl.getBoundingClientRect().bottom <= siteHeader.offsetHeight);
+    };
+    window.addEventListener('scroll', solid, { passive: true });
+    window.addEventListener('resize', solid);
+    solid();
+  }
+
   // 購入前に知りたいこと：目次の「今いる場所」に印をつける
   var toc = document.querySelector('[data-toc]');
   if (toc) {

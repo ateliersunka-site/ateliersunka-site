@@ -39,10 +39,11 @@
 }
 </script>
 </head>
-<body id="top">
+<body id="top" class="has-hero">
 
 <header class="site-header">
   <div class="container">
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
     <a class="brand" href="#top" aria-label="atelier Sunka ページの先頭へ">
       <img src="assets/images/logo.png" alt="Sunka ロゴ" width="58" height="52">
       <span>atelier Sunka</span>
@@ -55,6 +56,22 @@
     <a class="btn-store" href="https://ateliersunka.base.shop/">ONLINE STORE</a>
   </div>
 </header>
+
+<!-- 三本線のメニュー（左から開く） -->
+<div class="drawer" id="drawer" hidden>
+  <div class="drawer-bg" data-close></div>
+  <nav class="drawer-panel" aria-label="メニュー">
+    <button class="drawer-close" type="button" aria-label="メニューを閉じる" data-close>×</button>
+    <p class="drawer-label">MENU</p>
+    <a href="#about">ABOUT</a>
+    <a href="#product">PRODUCT</a>
+    <a href="guide.html">購入前に知りたいこと</a>
+    <a href="https://ateliersunka.base.shop/">ONLINE STORE</a>
+    <p class="drawer-label">FOLLOW</p>
+    <a class="drawer-sub" href="https://www.instagram.com/atelier_sunka25/">Instagram</a>
+    <a class="drawer-sub" href="https://note.com/ateliersunka">note</a>
+  </nav>
+</div>
 
 <main>
 
@@ -152,8 +169,7 @@
        商品を足すとき：<li class="product-card"> … </li> をまるごとコピーして、
        写真・商品名・素材・BASEの商品ページURLを書き換える。価格はのせない。 -->
   <section class="section container fade" id="product" aria-labelledby="product-h">
-    <p class="label">PRODUCT</p>
-    <h2 class="section-title" id="product-h">アイテム</h2>
+    <h2 class="section-title en" id="product-h">PRODUCT</h2>
     <p class="lead">定番の形を、作り重ねています。</p>
     <div class="product-slider" data-slider>
       <ul class="product-track" aria-label="商品の一覧（横にスクロールできます）">
