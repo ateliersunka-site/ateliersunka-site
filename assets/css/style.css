@@ -163,31 +163,32 @@ p { margin: 0; }
 .news-date { font-size: 18px; font-weight: 700; letter-spacing: .08em; color: var(--indigo); min-width: 140px; }
 .news-title { font-size: 18px; font-weight: 700; flex: 1 1 240px; }
 .news-type { font-size: 15px; color: var(--text-sub); }
-.news-empty { padding: 40px 8px; text-align: center; color: var(--text-sub); font-size: 15px; }
+.news-empty { padding: 40px 8px; text-align: center; color: var(--text-sub); font-size: 15px; line-height: 2; }
 .more { display: flex; justify-content: center; margin-top: 40px; font-size: 15px; font-weight: 700; letter-spacing: .16em; }
 
 /* ---------- 下層ページ ---------- */
 .page-head { padding: 96px 0 0; text-align: center; }
 .page-head h1 { margin: 8px 0 0; font-size: 40px; font-weight: 700; letter-spacing: .16em; line-height: 1.5; }
-.page-head .page-lead { margin-top: 24px; font-size: 18px; font-weight: 500; letter-spacing: .16em; color: var(--text-sub); }
+.page-head .page-lead { margin-top: 24px; font-size: 18px; font-weight: 500; letter-spacing: .16em; line-height: 2; color: var(--text-sub); }
 
 .prose { max-width: 760px; margin: 0 auto; }
-.prose h2 { margin: 0 0 24px; font-size: 28px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; }
-.prose p { font-size: 16px; color: var(--text-sub); }
-.prose p + p { margin-top: 16px; }
-.prose ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 16px; }
-.prose li { position: relative; padding-left: 20px; font-size: 16px; color: var(--text-sub); }
-.prose li::before { content: ""; position: absolute; left: 0; top: .8em; width: 8px; height: 8px; background: var(--indigo); }
-.prose li strong { color: var(--text); font-weight: 700; }
-.prose ul.no-mark li { padding-left: 0; }
-.prose ul.no-mark li::before { content: none; }
+.prose h2 { margin: 0 0 32px; font-size: 28px; font-weight: 700; letter-spacing: .14em; line-height: 1.5; }
+.prose p { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
+.prose p + p { margin-top: 1.4em; }
+
+/* 見出し＋説明の組み（ものづくりの姿勢・シリーズ紹介） */
+.points { margin: 0; display: flex; flex-direction: column; }
+.points dt { font-size: 17px; font-weight: 700; letter-spacing: .12em; color: var(--text); line-height: 1.8; }
+.points dt:not(:first-child) { margin-top: 2em; }
+.points dd { margin: 6px 0 0; font-size: 16px; line-height: 2.1; color: var(--text-sub); }
 
 .item-block { display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: center; }
 .item-block.reverse { flex-wrap: wrap-reverse; }
 .item-block .item-media { flex: 1 1 420px; }
-.item-block .item-body { flex: 1 1 340px; display: flex; flex-direction: column; gap: 20px; }
+.item-block .item-body { flex: 1 1 340px; display: flex; flex-direction: column; gap: 24px; }
 .item-block h2 { margin: 0; font-size: 32px; font-weight: 700; letter-spacing: .14em; }
-.item-block p { font-size: 16px; color: var(--text-sub); }
+.item-block p { font-size: 16px; line-height: 2.1; color: var(--text-sub); }
+.item-block .points { margin: 4px 0 8px; }
 .item-block .btn-main { align-self: flex-start; padding: 16px 40px; font-size: 15px; }
 
 .photo-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
@@ -247,7 +248,9 @@ p { margin: 0; }
   .btn-main { padding: 18px 32px; }
   .page-head { padding-top: 64px; }
   .page-head h1 { font-size: 30px; }
-  .prose h2 { font-size: 22px; }
+  .prose h2 { font-size: 22px; margin-bottom: 24px; }
+  .prose p, .points dd, .item-block p { line-height: 2; }
+  .page-head .page-lead { font-size: 16px; }
   .news-list a { padding: 22px 4px; }
   .news-date, .news-title { font-size: 16px; }
   .article dl { grid-template-columns: 1fr; gap: 4px; }
