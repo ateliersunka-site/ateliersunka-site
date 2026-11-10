@@ -242,6 +242,7 @@ body.drawer-open { overflow: hidden; }
 .guide-sec .guide-note { margin-top: 16px; font-size: 14px; }
 .guide-sec .guide-link { margin-top: 20px; font-size: 15px; font-weight: 700; letter-spacing: .08em; }
 .guide-link a { color: var(--indigo); }
+.guide-sec .size-range { margin-top: 40px; }
 .guide-main .btn-row { margin-top: 96px; }
 .wash-steps { margin: 32px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 40px; }
 .wash-step { display: grid; grid-template-columns: 260px 1fr; gap: 32px; align-items: start; }
