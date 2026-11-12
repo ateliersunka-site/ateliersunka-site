@@ -33,7 +33,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--indigo); transition: opacity .2s; }
 a:hover { opacity: .72; }
 p { margin: 0; }
-h1, h2, h3, h4 { margin: 0; font-weight: 500; }
+h1, h2, h3, h4 { margin: 0; font-weight: 700; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 [id] { scroll-margin-top: calc(var(--header-h) + 24px); }
 
@@ -43,7 +43,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .wrap { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
 
 /* ---------- 見出し（英字ラベル＋日本語） ---------- */
-.label { font-size: 12px; font-weight: 500; letter-spacing: .3em; color: var(--indigo); }
+.label { font-size: 12px; font-weight: 700; letter-spacing: .3em; color: var(--indigo); }
 .sec-head { text-align: center; padding: 0 24px; }
 .sec-head .label { margin-bottom: 10px; }
 .sec-head h2 { font-size: 22px; letter-spacing: .16em; line-height: 1.8; }
@@ -53,7 +53,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn-main {
   display: inline-flex; align-items: center; min-height: 48px; padding: 0 44px;
   background: var(--indigo); color: var(--white); text-decoration: none;
-  font-size: 13px; font-weight: 500; letter-spacing: .18em;
+  font-size: 13px; font-weight: 700; letter-spacing: .18em;
+}
+.btn-red {
+  display: inline-flex; align-items: center; min-height: 48px; padding: 0 44px;
+  background: var(--red); color: var(--white); text-decoration: none;
+  font-size: 13px; font-weight: 700; letter-spacing: .18em;
 }
 .btn-line {
   display: inline-flex; align-items: center; min-height: 44px; padding: 0 40px;
@@ -79,11 +84,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .has-hero .site-header.is-solid { background: rgba(255,255,255,.96); border-bottom-color: var(--line); color: var(--text); }
 .header-in {
   max-width: 1360px; height: 100%; margin: 0 auto; padding: 0 36px;
-  display: flex; align-items: center; justify-content: space-between; gap: 16px 32px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px 32px;
 }
+.header-in .brand { justify-self: start; }
+.header-in .menu-btn { justify-self: end; }
 .brand { display: flex; align-items: center; gap: 14px; color: inherit; text-decoration: none; }
 .brand img { height: 46px; width: auto; }
-.brand span { font-size: 15px; font-weight: 500; letter-spacing: .1em; white-space: nowrap; }
+.brand span { font-size: 15px; font-weight: 700; letter-spacing: .1em; white-space: nowrap; }
 .has-hero .site-header:not(.is-solid) .brand span,
 .has-hero .site-header:not(.is-solid) .nav-link { text-shadow: 0 1px 8px rgba(20,14,8,.45); }
 .nav { display: flex; align-items: center; gap: 8px 36px; font-size: 13px; letter-spacing: .14em; }
@@ -92,14 +99,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .btn-store {
   display: inline-flex; align-items: center; min-height: 44px; padding: 0 22px;
   background: var(--red); color: var(--white); text-decoration: none;
-  font-size: 12px; font-weight: 500; letter-spacing: .14em; white-space: nowrap;
+  font-size: 12px; font-weight: 700; letter-spacing: .14em; white-space: nowrap;
 }
 .menu-btn {
-  display: none; width: 44px; height: 44px; padding: 0; border: 0; background: transparent;
+  display: inline-flex; width: 44px; height: 44px; padding: 0; border: 0; background: transparent;
   color: inherit; cursor: pointer; align-items: center; justify-content: center;
 }
 .menu-panel {
-  position: absolute; top: 100%; left: 0; right: 0; background: var(--white); color: var(--text);
+  position: absolute; top: 100%; right: 0; width: min(340px, 100%); background: var(--white); color: var(--text);
   padding: 8px 24px 24px; box-shadow: 0 8px 16px rgba(0,0,0,.08);
 }
 .menu-panel[hidden] { display: none; }
@@ -130,7 +137,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .hero-copy { position: absolute; left: 0; right: 0; bottom: 96px; padding: 0 24px; text-align: center; text-shadow: 0 1px 12px rgba(20,14,8,.55); }
 .hero-brand { margin-bottom: 14px; font-size: 12px; letter-spacing: .24em; opacity: .92; }
-.hero h1 { margin-bottom: 18px; font-size: 28px; font-weight: 500; letter-spacing: .24em; line-height: 1.8; }
+.hero h1 { margin-bottom: 18px; font-size: 30px; font-weight: 900; letter-spacing: .24em; line-height: 1.8; }
 .hero-sub { font-size: 13px; letter-spacing: .16em; opacity: .94; }
 .hero-line { position: absolute; left: 50%; bottom: 28px; width: 1px; height: 44px; background: rgba(255,255,255,.75); }
 .js .hero-copy { animation: hero-in 1.6s ease-out .4s both; }
@@ -145,7 +152,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   flex: 1 1 480px; min-height: 580px; background: var(--gray-bg);
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 64px 9%;
 }
-.split-title { margin-bottom: 10px; font-size: 22px; font-weight: 500; letter-spacing: .2em; color: var(--indigo); }
+.split-title { margin-bottom: 28px; font-size: 22px; font-weight: 700; letter-spacing: .2em; color: var(--indigo); }
 .split-body .label { margin-bottom: 6px; }
 .split-body h2:not(.split-title) { margin-bottom: 20px; font-size: 22px; letter-spacing: .16em; }
 .split-body p:not(.label) { margin-bottom: 36px; font-size: 14px; color: var(--text-sub); }
@@ -160,28 +167,29 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .about .text-link { margin-top: 40px; color: var(--white); }
 
 /* ---------- 4. SCENE ---------- */
-.scene .sec-head { padding-top: 120px; padding-bottom: 56px; }
 .scene-grid { display: flex; flex-wrap: wrap; }
-.scene-item { flex: 1 1 460px; }
-.scene-photo { height: 560px; overflow: hidden; }
-.scene-photo img { width: 100%; height: 100%; object-fit: cover; }
-.scene-text { padding: 48px 10% 72px; }
-.scene-text h3 { margin-bottom: 18px; font-size: 18px; letter-spacing: .16em; }
-.scene-text p { font-size: 14px; color: var(--text-sub); }
+.scene-item { flex: 1 1 460px; position: relative; height: 620px; overflow: hidden; color: var(--white); }
+.scene-item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scene-shade { position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,20,12,.62) 0%, rgba(28,20,12,.22) 45%, rgba(28,20,12,0) 70%); }
+.scene-text { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 9% 56px; text-shadow: 0 1px 10px rgba(20,14,8,.55); }
+.scene-text h2 { margin-bottom: 14px; font-size: 22px; letter-spacing: .16em; }
+.scene-text p { font-size: 14px; }
 
 /* ---------- 5. CONCEPT ---------- */
 .concept { background: var(--gray-bg); padding: 120px 0; }
-.concept .sec-head { margin-bottom: 64px; }
 .concept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 56px; }
 .concept-photo { aspect-ratio: 4 / 5; overflow: hidden; margin-bottom: 28px; }
 .concept-photo img { width: 100%; height: 100%; object-fit: cover; }
-.concept-no { font-size: 26px; font-weight: 500; color: var(--red); line-height: 1; }
-.concept-item h3 { margin: 14px 0 12px; font-size: 17px; letter-spacing: .14em; }
+.concept-no { font-size: 26px; font-weight: 900; color: var(--red); line-height: 1; }
+.concept-item h2 { margin: 14px 0 12px; font-size: 18px; letter-spacing: .14em; }
 .concept-item p:not(.concept-no) { font-size: 14px; color: var(--text-sub); }
 
 /* ---------- 6. 写真帯 ---------- */
 .band { height: 560px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 24px; }
-.band-text { position: relative; font-size: 22px; font-weight: 500; letter-spacing: .22em; line-height: 2; }
+.band-text {
+  position: relative; background: var(--indigo); color: var(--white); text-shadow: none !important;
+  padding: 28px 44px; font-size: 24px; font-weight: 700; letter-spacing: .16em; line-height: 1.7;
+}
 
 /* ---------- 7. PRODUCT（横スライダー） ---------- */
 .product { padding: 120px 0 110px; }
@@ -308,9 +316,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .header-in { padding: 0 16px; gap: 8px; }
   .brand img { height: 38px; }
   .brand span { display: none; }
-  .nav { gap: 4px; }
+  .header-in { display: flex; justify-content: space-between; }
+  .nav { gap: 4px; margin-left: auto; }
   .nav-link { display: none; }
-  .menu-btn { display: inline-flex; }
   .btn-store { min-height: 40px; padding: 0 14px; font-size: 11px; }
 
   .hero { height: 620px; min-height: 0; }
@@ -326,17 +334,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .about p:not(.label) { text-align: left; line-height: 2.1; }
   .about .text-link { font-size: 12px; }
 
-  .scene .sec-head { padding-top: 88px; padding-bottom: 40px; }
-  .scene-item { flex-basis: 100%; }
-  .scene-photo { height: 340px; }
-  .scene-text { padding: 32px 20px 56px; }
+  .scene-item { flex-basis: 100%; height: 460px; }
+  .scene-text { padding: 0 20px 36px; }
+  .scene-text h2 { font-size: 19px; }
+  .scene-text p { font-size: 13px; }
 
   .concept { padding: 88px 0; }
-  .concept .sec-head { margin-bottom: 44px; }
   .concept-grid { gap: 48px; }
 
   .band { height: 400px; }
-  .band-text { font-size: 18px; letter-spacing: .14em; }
+  .band-text { font-size: 18px; letter-spacing: .12em; padding: 20px 24px; }
 
   .product { padding: 88px 0 80px; }
   .product .sec-head { margin-bottom: 40px; }

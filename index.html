@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261112">
+<link rel="stylesheet" href="assets/css/style.css?v=20261112b">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
@@ -54,12 +54,12 @@
       <a class="nav-link" href="#product">PRODUCT</a>
       <a class="nav-link" href="guide.html">購入前に</a>
       <a class="btn-store" href="https://ateliersunka.base.shop/">ONLINE STORE</a>
-      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="メニューを開く">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
     </nav>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="メニューを開く">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
-  <nav class="menu-panel" id="menu-panel" aria-label="スマホ用メニュー" hidden>
+  <nav class="menu-panel" id="menu-panel" aria-label="メニュー" hidden>
     <a href="#about">ABOUT</a>
     <a href="#product">PRODUCT</a>
     <a href="guide.html">購入前に知りたいこと</a>
@@ -90,8 +90,7 @@
     <div class="split-photo"><img class="zoom" src="assets/images/cap.webp" alt="使い込んで色が落ちたデニムのキャップ" width="1600" height="899" loading="lazy"></div>
     <div class="split-body">
       <h2 class="split-title reveal" id="store-h">ONLINE STORE</h2>
-      <p class="reveal d1">帽子は、オンラインショップでご覧いただけます。</p>
-      <a class="btn-main reveal d2" href="https://ateliersunka.base.shop/">ONLINE STOREで見る</a>
+      <a class="btn-red reveal d1" href="https://ateliersunka.base.shop/">ONLINE STOREで見る</a>
     </div>
   </section>
 
@@ -103,29 +102,27 @@
       <p class="label">ABOUT</p>
       <h2 id="about-h">暮らしの中で、<br>心地よくいつもそばにあるものを</h2>
       <p>atelier Sunka（アトリエ サンカ）は、帽子を中心に、暮らしの道具をつくるブランドです。<br>デザインから素材選び、縫製まで、すべてをひとりで手がけています。</p>
-      <p>個性的であることより、素朴であること。<br>心地よく使えることを、なにより大切にしています。</p>
+      <p>個性的であることより、日常に馴染む素朴さがあること。<br>心地よく使えることを、なにより大切にしています。</p>
       <a class="text-link" href="https://note.com/ateliersunka">ものづくりのこと、note で綴っています →</a>
     </div>
   </section>
 
   <!-- 4. SCENE：写真2枚を左右いっぱいに -->
-  <section class="scene" aria-labelledby="scene-h">
-    <div class="sec-head reveal">
-      <p class="label">SCENE</p>
-      <h2 id="scene-h">暮らしの中で、街の中で</h2>
-    </div>
+  <section class="scene" aria-label="使う場面">
     <div class="scene-grid">
       <div class="scene-item reveal">
-        <div class="scene-photo"><img class="zoom" src="assets/images/garden.webp" alt="帽子をかぶって庭仕事をする人の後ろ姿" width="1456" height="1088" loading="lazy"></div>
+        <img class="zoom" src="assets/images/garden.webp" alt="帽子をかぶって庭仕事をする人の後ろ姿" width="1456" height="1088" loading="lazy">
+        <div class="scene-shade" aria-hidden="true"></div>
         <div class="scene-text">
-          <h3>いつもの日に</h3>
+          <h2>いつもの日に</h2>
           <p>毎日の散歩に、趣味の山登りに、欠かさない庭仕事に。<br>ものづくりの時間や、日々の台所にも。<br>暑い夏も寒い冬も、暮らしに寄り添う相棒です。</p>
         </div>
       </div>
       <div class="scene-item reveal d1">
-        <div class="scene-photo"><img class="zoom" src="assets/images/city.webp" alt="帽子をかぶって街を歩く後ろ姿" width="1456" height="1088" loading="lazy"></div>
+        <img class="zoom" src="assets/images/city.webp" alt="帽子をかぶって街を歩く後ろ姿" width="1456" height="1088" loading="lazy">
+        <div class="scene-shade" aria-hidden="true"></div>
         <div class="scene-text">
-          <h3>出かける日に</h3>
+          <h2>出かける日に</h2>
           <p>気ままな遠出に、いつもと違う街歩きに。<br>大好きな旅や、ゆったりとしたカフェ巡りにも。<br>いつもの装いに、ちょうどいいをプラスして。</p>
         </div>
       </div>
@@ -133,29 +130,25 @@
   </section>
 
   <!-- 5. CONCEPT 01〜03 -->
-  <section class="concept" aria-labelledby="concept-h">
+  <section class="concept" aria-label="大切にしていること">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="label">CONCEPT</p>
-        <h2 id="concept-h">大切にしていること</h2>
-      </div>
       <div class="concept-grid">
         <div class="concept-item reveal">
           <div class="concept-photo"><img src="assets/images/workbench-sq.webp" alt="作業台に置かれたデニムと帆布の生地" width="800" height="800" loading="lazy"></div>
           <p class="concept-no">01</p>
-          <h3>素材</h3>
+          <h2>素材</h2>
           <p>綿やリネン、ウールなど、天然素材を中心に選んでいます。肌にやさしくなじみ、洗うたびにやわらかくなっていく、タフな素材です。</p>
         </div>
         <div class="concept-item reveal d1">
           <div class="concept-photo"><div class="ph">写真準備中：ミシンで縫う手元</div></div>
           <p class="concept-no">02</p>
-          <h3>ひとりで、ひとつずつ</h3>
+          <h2>ひとりで、ひとつずつ</h2>
           <p>デザインから裁断、縫製、仕上げまで。たくさん、早くつくるよりも、ひとつひとつと丁寧に向き合う時間を大切にしています。</p>
         </div>
         <div class="concept-item reveal d2">
           <div class="concept-photo"><img src="assets/images/cap-sq.webp" alt="使い込んで色が落ちたデニムのキャップ" width="800" height="800" loading="lazy"></div>
           <p class="concept-no">03</p>
-          <h3>使って育てる</h3>
+          <h2>使って育てる</h2>
           <p>日常的に使う。メンテナンスをする。それを繰り返す。そのたびに、色や形が変わっていく「セルフヴィンテージ」を、お楽しみください。</p>
         </div>
       </div>
@@ -272,6 +265,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261112"></script>
+<script src="assets/js/main.js?v=20261112b"></script>
 </body>
 </html>
