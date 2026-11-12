@@ -152,10 +152,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   flex: 1 1 480px; min-height: 580px; background: var(--gray-bg);
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 64px 9%;
 }
-.split-title { margin-bottom: 28px; font-size: 22px; font-weight: 700; letter-spacing: .2em; color: var(--indigo); }
+.split-title { margin-bottom: 10px; font-size: 22px; font-weight: 700; letter-spacing: .2em; color: var(--indigo); }
 .split-body .label { margin-bottom: 6px; }
 .split-body h2:not(.split-title) { margin-bottom: 20px; font-size: 22px; letter-spacing: .16em; }
 .split-body p:not(.label) { margin-bottom: 36px; font-size: 14px; color: var(--text-sub); }
+.split-body .split-text { color: var(--indigo); font-weight: 500; }
 
 /* ---------- 3. ABOUT ---------- */
 .about { padding: 150px 24px; text-align: center; }
