@@ -19,70 +19,86 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261110">
+<link rel="stylesheet" href="assets/css/style.css?v=20261112">
 <script>document.documentElement.classList.add('js');</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "トップ", "item": "https://ateliersunka.com/" },
+    { "@type": "ListItem", "position": 2, "name": "購入前に知りたいこと", "item": "https://ateliersunka.com/guide.html" }
+  ]
+}
+</script>
 </head>
-<body id="top">
+<body id="top" class="has-hero">
+
+<a class="skip" href="#main">本文へ移動</a>
 
 <header class="site-header">
-  <div class="container">
-    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <div class="header-in">
     <a class="brand" href="./" aria-label="atelier Sunka トップへ">
       <img src="assets/images/logo.png" alt="Sunka ロゴ" width="58" height="52">
       <span>atelier Sunka</span>
     </a>
     <nav class="nav" aria-label="メインメニュー">
-      <a href="./#about">ABOUT</a>
-      <a href="./#product">PRODUCT</a>
-      <a href="guide.html" aria-current="page">購入前に</a>
+      <a class="nav-link" href="./#about">ABOUT</a>
+      <a class="nav-link" href="./#product">PRODUCT</a>
+      <a class="nav-link" href="guide.html" aria-current="page">購入前に</a>
+      <a class="btn-store" href="https://ateliersunka.base.shop/">ONLINE STORE</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="メニューを開く">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </nav>
-    <a class="btn-store" href="https://ateliersunka.base.shop/">ONLINE STORE</a>
   </div>
+  <nav class="menu-panel" id="menu-panel" aria-label="スマホ用メニュー" hidden>
+    <a href="./">トップ</a>
+    <a href="#care">お手入れ</a>
+    <a href="#size">サイズ</a>
+    <a href="#wrapping">ラッピング</a>
+    <a href="https://ateliersunka.base.shop/">ONLINE STORE</a>
+  </nav>
 </header>
 
-<!-- 三本線のメニュー（左から開く） -->
-<div class="drawer" id="drawer" hidden>
-  <div class="drawer-bg" data-close></div>
-  <nav class="drawer-panel" aria-label="メニュー">
-    <button class="drawer-close" type="button" aria-label="メニューを閉じる" data-close>×</button>
-    <p class="drawer-label">MENU</p>
-    <a href="./#about">ABOUT</a>
-    <a href="./#product">PRODUCT</a>
-    <a href="guide.html" aria-current="page">購入前に知りたいこと</a>
-    <a href="https://ateliersunka.base.shop/">ONLINE STORE</a>
-    <p class="drawer-label">FOLLOW</p>
-    <a class="drawer-sub" href="https://www.instagram.com/atelier_sunka25/">Instagram</a>
-    <a class="drawer-sub" href="https://note.com/ateliersunka">note</a>
+<main id="main">
+
+  <!-- 見出し：写真の上にページ名 -->
+  <section class="page-hero" aria-labelledby="page-h">
+    <img class="photo-bg" src="assets/images/workbench.webp" alt="" width="1600" height="899" fetchpriority="high">
+    <div class="photo-shade" aria-hidden="true"></div>
+    <div class="page-hero-copy">
+      <p class="label">GUIDE</p>
+      <h1 id="page-h">購入前に知りたいこと</h1>
+    </div>
+  </section>
+
+  <!-- ページ内の目次（スクロールしても上に残り、いま見ている項目に印がつく） -->
+  <nav class="toc" aria-label="このページの目次" data-toc>
+    <a href="#care">お手入れ</a>
+    <a href="#size">サイズ</a>
+    <a href="#wrapping">ラッピング</a>
   </nav>
-</div>
 
-<main>
+  <nav class="crumb" aria-label="パンくずリスト">
+    <ol>
+      <li><a href="./">トップ</a></li>
+      <li aria-current="page">購入前に知りたいこと</li>
+    </ol>
+  </nav>
 
-  <div class="page-head container">
-    <p class="label">GUIDE</p>
-    <h1>購入前に知りたいこと</h1>
-  </div>
-
-  <div class="guide-layout container">
-
-    <!-- 目次：押すとその項目までスクロールする -->
-    <nav class="guide-toc" aria-label="このページの目次" data-toc>
-      <p class="guide-toc-title">CONTENTS</p>
-      <ul>
-        <li><a href="#care">お手入れ</a></li>
-        <li><a href="#size">サイズ</a></li>
-        <li><a href="#wrapping">ラッピング</a></li>
-      </ul>
-    </nav>
-
-    <div class="guide-main">
-
-      <section class="guide-sec" id="care" aria-labelledby="care-h">
+  <!-- お手入れ：左に見出し、右に手順 -->
+  <section class="g-sec" id="care" aria-labelledby="care-h">
+    <div class="g-two">
+      <div class="g-intro reveal">
+        <p class="label">CARE</p>
         <h2 id="care-h">お手入れ</h2>
         <p>基本はご自宅で洗えます。<br>ウールを使った商品はドライクリーニングをおすすめします。</p>
+      </div>
+      <div class="g-main">
         <h3>洗い方</h3>
         <!-- 図は仮のイラスト。洗い方の写真がそろったら、同じ順番で img を差し替える -->
-        <p>綿やリネン、デニムの帽子は、ご自宅で手洗いできます。<br>洗うたびに少しずつ色が落ち、やわらかくなっていく。<br>その変化も、セルフヴィンテージの楽しみのひとつです。</p>
+        <p class="g-lead">綿やリネン、デニムの帽子は、ご自宅で手洗いできます。<br>洗うたびに少しずつ色が落ち、やわらかくなっていく。<br>その変化も、セルフヴィンテージの楽しみのひとつです。</p>
         <ol class="wash-steps">
           <li class="wash-step">
             <div class="wash-fig">
@@ -127,14 +143,27 @@
             </div>
           </li>
         </ol>
-        <h3>保管方法</h3>
-        <p>湿気の少ない、風通しのよい場所にしまってください。<br>強い光に長く当てると、色があせることがあります。</p>
-      </section>
+        <div class="g-box">
+          <h3>保管方法</h3>
+          <p>湿気の少ない、風通しのよい場所にしまってください。<br>強い光に長く当てると、色があせることがあります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <section class="guide-sec" id="size" aria-labelledby="size-h">
+  <!-- 写真帯 -->
+  <div class="g-band" aria-hidden="true"><img class="zoom" src="assets/images/garden.webp" alt="" width="1456" height="1088" loading="lazy"></div>
+
+  <!-- サイズ：左に見出し、右に手順 -->
+  <section class="g-sec" id="size" aria-labelledby="size-h">
+    <div class="g-two">
+      <div class="g-intro reveal">
+        <p class="label">SIZE</p>
         <h2 id="size-h">サイズ</h2>
-        <h3>測り方</h3>
         <p>メジャーで、頭まわりを測ります。<br>帽子がちょうど当たる位置を、ぐるりと一周させるのがポイントです。</p>
+      </div>
+      <div class="g-main">
+        <h3>測り方</h3>
         <ol class="wash-steps">
           <li class="wash-step">
             <div class="wash-fig">
@@ -167,33 +196,37 @@
             </div>
           </li>
         </ol>
-        <h3>測るときの注意</h3>
-        <p>メジャーがたるまないようにしてください。<br>強く引っ張りすぎないようにしてください。</p>
+        <div class="g-box">
+          <h3>測るときの注意</h3>
+          <p>メジャーがたるまないようにしてください。<br>強く引っ張りすぎないようにしてください。</p>
+        </div>
         <h3>サイズの選び方</h3>
         <p>測った頭まわりと、各商品ページの実寸を見比べてお選びください。<br>頭まわりに0.5cmほど足したサイズが、ひとつの目安です。</p>
-        <p class="guide-link"><a href="https://ateliersunka.base.shop/">ONLINE STOREで実寸を見る →</a></p>
+        <p class="g-link"><a href="https://ateliersunka.base.shop/">ONLINE STOREで実寸を見る →</a></p>
         <p class="size-range">Mサイズ・Lサイズ・フリーサイズで展開しています。<br>それより小さいサイズや大きいサイズをご希望の場合は、<br>オンラインショップよりお問合せください。</p>
-      </section>
-
-      <section class="guide-sec" id="wrapping" aria-labelledby="wrapping-h">
-        <h2 id="wrapping-h">ラッピング</h2>
-        <p>有料で承ります（550円・税込）。<br>ラッピングを商品と一緒にカートへお入れください。</p>
-        <p class="guide-link"><a href="https://ateliersunka.base.shop/">ONLINE STOREでラッピングを見る →</a></p>
-      </section>
-
-
-      <div class="btn-row"><a class="btn-main" href="https://ateliersunka.base.shop/">ONLINE STOREで見る</a></div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ラッピング：写真｜余白の2分割 -->
+  <section class="split" id="wrapping" aria-labelledby="wrapping-h">
+    <div class="split-photo"><div class="ph">写真準備中：ラッピング</div></div>
+    <div class="split-body">
+      <p class="label reveal">WRAPPING</p>
+      <h2 class="reveal" id="wrapping-h">ラッピング</h2>
+      <p class="reveal d1">有料で承ります（550円・税込）。<br>ラッピングを商品と一緒にカートへお入れください。</p>
+      <a class="btn-main reveal d2" href="https://ateliersunka.base.shop/">ONLINE STOREでラッピングを見る</a>
+    </div>
+  </section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-brand">
+  <div class="footer-in">
+    <a class="footer-brand" href="./" aria-label="atelier Sunka トップへ">
       <img src="assets/images/logo.png" alt="Sunka ロゴ" width="134" height="120" loading="lazy">
       <span>atelier Sunka</span>
-    </div>
+    </a>
     <nav class="footer-nav" aria-label="フッターメニュー">
       <a href="./#about">ABOUT</a>
       <a href="./#product">PRODUCT</a>
@@ -201,12 +234,14 @@
       <a href="https://ateliersunka.base.shop/">ONLINE STORE</a>
       <a href="https://www.instagram.com/atelier_sunka25/">Instagram</a>
       <a href="https://note.com/ateliersunka">note</a>
-      <a href="#top">ページの先頭へ ↑</a>
     </nav>
   </div>
-  <p class="copyright">© 2026 atelier Sunka</p>
+  <div class="footer-bottom">
+    <p>© 2026 atelier Sunka</p>
+    <a href="#top">ページの先頭へ ↑</a>
+  </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261110"></script>
+<script src="assets/js/main.js?v=20261112"></script>
 </body>
 </html>
