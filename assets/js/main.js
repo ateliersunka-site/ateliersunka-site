@@ -36,7 +36,11 @@
     window.addEventListener('resize', function () { if (getComputedStyle(btn).display === 'none') setMenu(false); });
   }
 
-  // ファーストビュー：写真3枚がゆっくり切り替わる
+  // ファーストビューの動画：「動きを減らす」設定の人には止めて、最初の1枚を見せる
+  var video = document.querySelector('.hero-video');
+  if (video && reduce) { video.removeAttribute('autoplay'); video.pause(); }
+
+  // ファーストビュー（写真に戻したとき用）：写真がゆっくり切り替わる
   var hero = document.querySelector('[data-hero]');
   if (hero && !reduce) {
     var slides = hero.querySelectorAll('.hero-slide');

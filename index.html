@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261113a">
+<link rel="stylesheet" href="assets/css/style.css?v=20261113b">
 <script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
@@ -71,11 +71,9 @@
 
 <main id="main">
 
-  <!-- 1. ファーストビュー：写真3枚がゆっくり切り替わる -->
+  <!-- 1. ファーストビュー：動画（音なし・くり返し）。「動きを減らす」設定の人には止めた1枚を見せる -->
   <section class="hero" data-hero aria-label="atelier Sunka">
-    <img class="hero-slide is-active" src="assets/images/mountain.webp" alt="帽子をかぶって山道を歩く後ろ姿" width="1600" height="899" fetchpriority="high">
-    <img class="hero-slide" src="assets/images/garden.webp" alt="帽子をかぶって庭仕事をする人の後ろ姿" width="1456" height="1088">
-    <img class="hero-slide" src="assets/images/city.webp" alt="帽子をかぶって街を歩く後ろ姿" width="1456" height="1088">
+    <video class="hero-video" src="assets/video/hero.mp4" poster="assets/images/hero-poster.webp" autoplay muted loop playsinline preload="auto" aria-label="帽子をかぶり、リュックを背負って山のふもとを歩く後ろ姿"></video>
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-copy">
       <p class="hero-brand">帽子と暮らしの道具　atelier Sunka（アトリエ サンカ）</p>
@@ -100,7 +98,7 @@
   <section class="scene" aria-label="使う場面">
     <div class="scene-grid">
       <div class="scene-item reveal">
-        <img class="zoom" src="assets/images/garden.webp" alt="帽子をかぶって庭仕事をする人の後ろ姿" width="1456" height="1088" loading="lazy">
+        <img class="zoom" src="assets/images/scene-everyday.webp" alt="デニムのキャップをかぶって庭の手入れをする人の後ろ姿" width="925" height="693" loading="lazy">
         <div class="scene-shade" aria-hidden="true"></div>
         <div class="scene-text">
           <h2>いつもの日に</h2>
@@ -108,7 +106,7 @@
         </div>
       </div>
       <div class="scene-item reveal d1">
-        <img class="zoom" src="assets/images/city.webp" alt="帽子をかぶって街を歩く後ろ姿" width="1456" height="1088" loading="lazy">
+        <img class="zoom" src="assets/images/scene-outing.webp" alt="デニムのバケットハットをかぶって街を歩く人の後ろ姿" width="1600" height="1200" loading="lazy">
         <div class="scene-shade" aria-hidden="true"></div>
         <div class="scene-text">
           <h2>出かける日に</h2>
@@ -127,19 +125,19 @@
       </div>
       <div class="concept-grid">
         <div class="concept-item reveal">
-          <div class="concept-photo"><img src="assets/images/workbench-sq.webp" alt="作業台に置かれたデニムと帆布の生地" width="800" height="800" loading="lazy"></div>
+          <div class="concept-photo"><img src="assets/images/concept-material.webp" alt="作業台に広げたデニム生地と裁ちばさみ" width="758" height="948" loading="lazy"></div>
           <p class="concept-no">01</p>
           <h3>素材</h3>
           <p>帽子は、綿やリネン、ウールなど、天然素材を中心に選んでいます。使うほどになじみ、洗うたびにやわらかくなっていくタフな素材です。</p>
         </div>
         <div class="concept-item reveal d1">
-          <div class="concept-photo"><div class="ph">写真準備中：ミシンで縫う手元</div></div>
+          <div class="concept-photo"><img src="assets/images/concept-sewing.webp" alt="ミシンで帽子の生地を縫っているところ" width="486" height="608" loading="lazy"></div>
           <p class="concept-no">02</p>
           <h3>ひとりで、ひとつずつ</h3>
           <p>デザインから裁断、縫製、仕上げまで。たくさん、早くつくるよりも、ひとつひとつと丁寧に向き合う時間を大切にしています。</p>
         </div>
         <div class="concept-item reveal d2">
-          <div class="concept-photo"><img src="assets/images/cap-sq.webp" alt="使い込んで色が落ちたデニムのキャップ" width="800" height="800" loading="lazy"></div>
+          <div class="concept-photo"><img src="assets/images/concept-grow.webp" alt="手に持ったデニムのバケットハット。白いステッチが入っている" width="800" height="1000" loading="lazy"></div>
           <p class="concept-no">03</p>
           <h3>使って育てる</h3>
           <p>日常的に使う。メンテナンスをする。それを繰り返す。そのたびに、色や形が変わっていく「セルフヴィンテージ」を、お楽しみください。</p>
@@ -150,7 +148,7 @@
 
   <!-- 6. 写真帯：全面写真の上にひとこと -->
   <section class="photo-section band" aria-label="コンセプトの一文">
-    <img class="photo-bg zoom" src="assets/images/mountain.webp" alt="" width="1600" height="899" loading="lazy">
+    <img class="photo-bg zoom" src="assets/images/band.webp" alt="" width="1800" height="900" loading="lazy">
     <div class="photo-shade" aria-hidden="true"></div>
     <p class="band-text reveal">時代に合わせすぎない、<br>ちょうどいい日常を。</p>
   </section>
@@ -258,6 +256,6 @@
   </div>
 </footer>
 
-<script src="assets/js/main.js?v=20261113a"></script>
+<script src="assets/js/main.js?v=20261113b"></script>
 </body>
 </html>
