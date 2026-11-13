@@ -141,5 +141,5 @@ ONLINE STORE への入口は、ヘッダーの赤いボタン（いつも上に�
 - ファーストビュー・場面・理念3枚・写真帯・guide.html の見出しと写真帯は、作家が撮った写真・動画に差し替え済み（2026年11月13日）
 - guide.html の洗い方の文章は、作家が確認済み（2026年11月13日）
 - トップの Instagram 欄は、作家が送った投稿のスクショを、中央で正方形に切り抜いて並べている（assets/images/insta/、600px）。自動では入れ替わらない。入れ替えるときは、作家から新しいスクショをもらう
-- 独自ドメイン ateliersunka.com をつなぐときは、公開先の案内に沿って設定する
-- 動作確認のため、仮の写真のまま GitHub Pages で仮公開している。全ページの <meta name="robots" content="noindex"> は検索に出さないための一時的な設定。本公開のときに必ず消す
+- 独自ドメイン ateliersunka.com は XServerドメインで取得（2026年11月13日）。DNS：A 185.199.108〜111.153 ×4、www CNAME ateliersunka-site.github.io、NS ns1〜3.xdomain.ne.jp。リポジトリ直下の CNAME ファイルは GitHub の設定で作られたもの。消さない
+- 本公開で、全ページの <meta name="robots" content="noindex">（検索に出さない設定）を外した
