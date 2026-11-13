@@ -263,6 +263,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .crumb a { color: var(--text-sub); }
 
 .g-sec { max-width: var(--max); margin: 0 auto; padding: 120px 32px 40px; }
+.g-sec:last-child { padding-bottom: 120px; }  /* ページ最後の項目の下に余白 */
 .g-two { display: flex; flex-wrap: wrap; gap: 64px; }
 .g-intro { flex: 1 1 300px; align-self: flex-start; position: sticky; top: calc(var(--header-h) + 92px); }
 .g-intro .label { margin-bottom: 6px; }
@@ -305,8 +306,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .js .reveal.d2 { transition-delay: .3s; }
 /* 見出しを1行ずつ下から浮き出す（ABOUT のひと言） */
 .lines .line { display: block; overflow: hidden; }
-.js .lines .line > span { display: inline-block; transform: translateY(110%); transition: transform 2s cubic-bezier(.25,.5,.25,1) .4s; }
-.js .lines .line:nth-child(2) > span { transition-delay: 1.1s; }
+.js .lines .line > span { display: inline-block; transform: translateY(110%); transition: transform 1.6s cubic-bezier(.25,.5,.25,1) .1s; }
+.js .lines .line:nth-child(2) > span { transition-delay: .5s; }
 .js .is-visible .lines .line > span { transform: none; }
 .zoom { transform-origin: center; will-change: transform; }
 
@@ -382,6 +383,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .toc { gap: 0 28px; }
   .crumb { padding: 16px 20px 0; }
   .g-sec { padding: 80px 20px 32px; }
+  .g-sec:last-child { padding-bottom: 80px; }
   .g-two { gap: 32px; }
   .g-intro { position: static; flex-basis: 100%; }
   .g-main { flex-basis: 100%; }
