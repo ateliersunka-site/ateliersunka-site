@@ -27,7 +27,7 @@
 5. 写真帯：全面写真の上に、インディゴの四角で「時代に合わせすぎない、ちょうどいい日常を。」
 6. PRODUCT（#product）：英字ラベル PRODUCT ＋ 見出し「定番の形を、作り重ねています。」→ 商品の横スライダー → ONLINE STORE ボタン（文字は「ONLINE STORE」だけ）
 7. 購入前に知りたいこと（#guide）：3枚のカード
-8. Instagram：投稿の画像6枚を左右いっぱいに並べる（色は投稿のまま）
+8. Instagram：投稿の画像6枚を左右いっぱいに並べる（色は投稿のまま。ふわっと表示やマウスを重ねたときの効果もつけない）
 9. フッター（ABOUT／PRODUCT／購入前に／ONLINE STORE／Instagram／note／ページの先頭へ）
 
 メニューの表記：ABOUT（→ #about）／PRODUCT（→ #product）／購入前に（→ guide.html）／ONLINE STORE（→ BASE）

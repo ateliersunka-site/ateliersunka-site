@@ -227,6 +227,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .insta .btn-line { margin-top: 28px; }
 .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); }
 .insta-grid a { display: block; aspect-ratio: 1 / 1; overflow: hidden; text-decoration: none; }
+.insta-grid a:hover { opacity: 1; }  /* Instagram の画像は効果をつけず、そのまま表示 */
 .insta-grid img { width: 100%; height: 100%; object-fit: cover; }
 .insta-grid .ph { min-height: 0; }
 
