@@ -27,7 +27,7 @@
 5. 写真帯：全面写真の上に、インディゴの四角で「時代に合わせすぎない、ちょうどいい日常を。」
 6. PRODUCT（#product）：英字ラベル PRODUCT ＋ 見出し「定番の形を、作り重ねています。」→ 商品の横スライダー → ONLINE STORE ボタン（文字は「ONLINE STORE」だけ）
 7. 購入前に知りたいこと（#guide）：3枚のカード
-8. Instagram：写真6枚を左右いっぱいに並べる
+8. Instagram：投稿の画像6枚を左右いっぱいに並べる（色は投稿のまま）
 9. フッター（ABOUT／PRODUCT／購入前に／ONLINE STORE／Instagram／note／ページの先頭へ）
 
 メニューの表記：ABOUT（→ #about）／PRODUCT（→ #product）／購入前に（→ guide.html）／ONLINE STORE（→ BASE）
@@ -137,10 +137,9 @@ ONLINE STORE への入口は、ヘッダーの赤いボタン（いつも上に�
 
 ## 8. 公開前に残っていること（2026年11月時点）
 
-- assets/images の *-sq.webp（Instagram 欄）は、雰囲気確認用の仮の写真（AIで作ったもの）。実際の写真に差し替えてから公開する
-- 「写真準備中」の枠（Instagram 6枚目・guide.html のラッピング）に写真を入れる
-- ファーストビュー・場面・理念3枚・写真帯・guide.html の見出しと写真帯は、作家が撮った写真・動画に差し替え済み（2026年11月13日）。Instagram 欄の写真はまだ仮
+- 「写真準備中」の枠（guide.html のラッピング）に写真を入れる
+- ファーストビュー・場面・理念3枚・写真帯・guide.html の見出しと写真帯は、作家が撮った写真・動画に差し替え済み（2026年11月13日）
 - guide.html の洗い方の文章（水の温度・脱水の時間など）を、作家が実際の商品で確かめる
-- トップの Instagram 欄は、いまは写真を並べて Instagram へリンクしているだけ。投稿を自動で表示するかは未決定
+- トップの Instagram 欄は、作家が送った投稿のスクショを、中央で正方形に切り抜いて並べている（assets/images/insta/、600px）。自動では入れ替わらない。入れ替えるときは、作家から新しいスクショをもらう
 - 独自ドメイン ateliersunka.com をつなぐときは、公開先の案内に沿って設定する
 - 動作確認のため、仮の写真のまま GitHub Pages で仮公開している。全ページの <meta name="robots" content="noindex"> は検索に出さないための一時的な設定。本公開のときに必ず消す
