@@ -397,3 +397,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .wash-body p { font-size: 13px; line-height: 1.85; }
   .wash-body .wash-note { font-size: 12px; margin-top: 8px; padding: 10px 12px; }
 }
+
+/* WOODPRINT：木版の帽子（白い背景。写真は正方形で3つ並べる） */
+.woodprint { background: var(--white); padding: 120px 24px; }
+.woodprint-inner { max-width: 880px; margin: 0 auto; }
+.woodprint .sec-head { margin-bottom: 40px; }
+.woodprint-text { text-align: center; }
+.woodprint-text p { font-size: 14px; line-height: 2.3; color: var(--text-sub); }
+.woodprint-text p + p { margin-top: 1.4em; }
+.woodprint-photos { list-style: none; margin: 56px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.woodprint-photos li { aspect-ratio: 1 / 1; overflow: hidden; }
+.woodprint-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sp-br { display: none; }
+@media (max-width: 760px) {
+  .woodprint { padding: 88px 20px; }
+  .woodprint-text { text-align: left; }
+  .woodprint-photos { gap: 8px; margin-top: 40px; }
+  .sp-br { display: inline; }
+}
