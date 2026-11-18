@@ -405,13 +405,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .woodprint-text { text-align: center; }
 .woodprint-text p { font-size: 14px; line-height: 2.3; color: var(--text-sub); }
 .woodprint-text p + p { margin-top: 1.4em; }
-.woodprint-photos { list-style: none; margin: 56px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.woodprint-photos { list-style: none; margin: 0 0 56px; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .woodprint-photos li { aspect-ratio: 1 / 1; overflow: hidden; }
 .woodprint-photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .sp-br { display: none; }
 @media (max-width: 760px) {
   .woodprint { padding: 88px 20px; }
   .woodprint-text { text-align: left; }
-  .woodprint-photos { gap: 8px; margin-top: 40px; }
+  .woodprint-photos { gap: 8px; margin-bottom: 40px; }
   .sp-br { display: inline; }
 }
